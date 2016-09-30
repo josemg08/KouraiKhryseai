@@ -7,5 +7,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ButtonMaterialPrimary" parent="Widget.AppCompat.Button">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="colorDark">@color/colorPrimaryDark</item>
+        <item name="colorLight">@color/colorPrimary</item>
+    </style>
+
 </resources>
 <!--.___ End of styles __.-->
