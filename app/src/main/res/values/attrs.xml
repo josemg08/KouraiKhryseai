@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--attributes used by differents kinds of components-->
+    <attr name="colorDark" format="color"/>
+    <attr name="colorLight" format="color"/>
 
     <declare-styleable name="CustomMaterialButton">
         <attr name="colorDark"/>
