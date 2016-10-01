@@ -36,20 +36,18 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
-        switch(view.getId()){
-            case R.id.accent_circular_reveal_button:
-                primaryButton.bringToFront();
-                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+        if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+            switch (view.getId()) {
+                case R.id.accent_circular_reveal_button:
+                    primaryButton.bringToFront();
                     selectButton(primaryButton, true, (int) motionEvent.getX(), (int) motionEvent.getY());
-                }
-                break;
-            case R.id.primary_circular_reveal_button:
-                accentButton.bringToFront();
-                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    break;
+                case R.id.primary_circular_reveal_button:
+                    accentButton.bringToFront();
                     selectButton(accentButton, true, (int) motionEvent.getX(), (int) motionEvent.getY());
-                }
-                break;
+                    break;
         }
+    }
 
         return false;
     }
