@@ -11,9 +11,26 @@
     tools:context="josegonzalez.hephaestus.kouraikhryseai.MainActivity">
 
     <josegonzalez.hephaestus.kouraikhryseai.widgets.CustomMaterialButton
-        android:layout_width="100dp"
+        android:id="@+id/ripple_button"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="Material"
-        style="@style/ButtonMaterialPrimary"/>
+        style="@style/ButtonMaterialPrimary"
+        android:text="Ripple"/>
+
+    <Button
+        android:id="@+id/primary_circular_reveal_button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary"
+        android:text="Primary circular reveal button"
+        android:layout_below="@id/ripple_button"/>
+
+    <Button
+        android:id="@+id/accent_circular_reveal_button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorAccent"
+        android:text="Accent circular reveal button"
+        android:layout_below="@id/ripple_button"/>
 
 </RelativeLayout>
