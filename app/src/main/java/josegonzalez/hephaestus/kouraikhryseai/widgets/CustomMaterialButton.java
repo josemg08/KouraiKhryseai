@@ -3,7 +3,7 @@ package josegonzalez.hephaestus.kouraikhryseai.widgets;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.RippleDrawable;
 import android.os.Build;
 import android.util.AttributeSet;
@@ -35,7 +35,7 @@ public class CustomMaterialButton extends CustomButton {
     @Override
     protected void setBackground() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            setBackgroundDrawable(getButtonBackgroundRippleDrawable(colorLight, colorDark));
+            setBackgroundDrawable(getButtonBackgroundRippleDrawable(mColorLight, mColorDark));
         } else {
             setBackgroundDrawable(getButtonBackgroundStateList());
         }
@@ -44,11 +44,11 @@ public class CustomMaterialButton extends CustomButton {
     //.___ Ripple effect __./
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public static RippleDrawable getButtonBackgroundRippleDrawable(int normalColor, int pressedColor) {
-        return new RippleDrawable(getPressedColorSelector(pressedColor), getColorDrawableFromColor(normalColor), null);
+    public RippleDrawable getButtonBackgroundRippleDrawable(int normalColor, int pressedColor) {
+        return new RippleDrawable(getPressedColorSelector(pressedColor), getDrawableFromColor(normalColor), null);
     }
 
-    private static ColorStateList getPressedColorSelector(int pressedColor) {
+    private ColorStateList getPressedColorSelector(int pressedColor) {
         return new ColorStateList(
                 new int[][]{
                         new int[]{android.R.attr.state_hovered},
@@ -67,8 +67,11 @@ public class CustomMaterialButton extends CustomButton {
         );
     }
 
-    public static ColorDrawable getColorDrawableFromColor(int color) {
-        return new ColorDrawable(color);
+    public GradientDrawable getDrawableFromColor(int color) {
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setColor(color);
+        drawable.setCornerRadius(mCornerRadius);
+        return drawable;
     }
 
 }
