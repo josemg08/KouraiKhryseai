@@ -8,29 +8,21 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="josegonzalez.hephaestus.kouraikhryseai.MainActivity">
+    tools:context="josegonzalez.hephaestus.kouraikhryseai.SandboxActivity">
 
     <josegonzalez.hephaestus.kouraikhryseai.widgets.CustomMaterialButton
         android:id="@+id/ripple_button"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         style="@style/ButtonMaterialPrimary"
-        android:text="Ripple"/>
+        android:text="Ripple"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
 
-    <Button
-        android:id="@+id/primary_circular_reveal_button"
+    <include
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
-        android:text="Primary circular reveal button"
-        android:layout_below="@id/ripple_button"/>
-
-    <Button
-        android:id="@+id/accent_circular_reveal_button"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/colorAccent"
-        android:text="Accent circular reveal button"
-        android:layout_below="@id/ripple_button"/>
+        layout="@layout/circular_color_changing_buttons"
+        android:layout_below="@+id/ripple_button" />
 
 </RelativeLayout>
+    <!--.___ End of activity_sandbox __.-->

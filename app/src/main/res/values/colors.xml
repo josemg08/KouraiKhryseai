@@ -10,6 +10,17 @@
     <color name="colorPrimary">#202b3d</color>
     <color name="colorPrimaryDark">#0f141c</color>
     <color name="colorAccent">#ff9654</color>
+    <color name="colorAccentDark">#ff731b</color>
+
+    <!--.___ other colors __.-->
+
+    <color name="white">#ffffff</color>
+    <color name="grey">#cccccc</color>
+    <color name="black">#000000</color>
+
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
+    <color name="blue">#0000ff</color>
 
 </resources>
 <!--.___ End of colors __.-->

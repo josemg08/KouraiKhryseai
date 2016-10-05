@@ -4,20 +4,19 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnTouchListener{
+public class SandboxActivity extends AppCompatActivity implements View.OnTouchListener{
     Button accentButton;
     Button primaryButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sandbox);
         accentButton = (Button) findViewById(R.id.accent_circular_reveal_button);
         accentButton.setOnTouchListener(this);
         primaryButton = (Button) findViewById(R.id.primary_circular_reveal_button);
@@ -46,10 +45,11 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     accentButton.bringToFront();
                     selectButton(accentButton, true, (int) motionEvent.getX(), (int) motionEvent.getY());
                     break;
+            }
         }
-    }
 
         return false;
     }
 
 }
+//.___ End of SandBox Activity __./
