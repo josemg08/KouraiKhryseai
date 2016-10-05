@@ -8,13 +8,15 @@
         android:id="@+id/primary_circular_reveal_button"
         style="@style/ButtonPrimary"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:elevation="@dimen/distance_12dp"/>
 
     <josegonzalez.hephaestus.kouraikhryseai.widgets.CustomButton
         android:id="@+id/accent_circular_reveal_button"
         style="@style/ButtonAccent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:elevation="@dimen/distance_12dp"/>
 
 </RelativeLayout>
 <!--.___ End of circular_color_changing_buttons __.-->

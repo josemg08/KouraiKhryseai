@@ -23,21 +23,25 @@ public class CircularColorButtonChanger {
         firstButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN
+                        || event.getAction() == MotionEvent.ACTION_BUTTON_PRESS
+                        || event.getAction() == MotionEvent.ACTION_POINTER_DOWN) {
                     secondButton.bringToFront();
                     selectButton(secondButton, true, (int) event.getX(), (int) event.getY());
                 }
-                return false;
+                return true;
             }
         });
         secondButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN
+                        || event.getAction() == MotionEvent.ACTION_BUTTON_PRESS
+                        || event.getAction() == MotionEvent.ACTION_POINTER_DOWN) {
                     firstButton.bringToFront();
                     selectButton(firstButton, true, (int) event.getX(), (int) event.getY());
                 }
-                return false;
+                return true;
             }
         });
     }

@@ -45,7 +45,9 @@ public class CustomMaterialButton extends CustomButton {
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public RippleDrawable getButtonBackgroundRippleDrawable(int normalColor, int pressedColor) {
-        return new RippleDrawable(getPressedColorSelector(pressedColor), getDrawableFromColor(normalColor), null);
+        return new RippleDrawable(getPressedColorSelector(pressedColor),
+                getDrawableFromColor(normalColor),
+                getDrawableFromColor(normalColor));
     }
 
     private ColorStateList getPressedColorSelector(int pressedColor) {
@@ -73,6 +75,18 @@ public class CustomMaterialButton extends CustomButton {
         drawable.setCornerRadius(mCornerRadius);
         return drawable;
     }
+
+   /* private static Drawable getRippleMask(int color) {
+        float[] outerRadii = new float[8];
+        Arrays.fill(outerRadii, 3);// 3 is radius of final ripple, instead of 3 you can give required final radius
+
+        RoundRectShape r = new RoundRectShape(outerRadii, null, null);
+
+        ShapeDrawable shapeDrawable = new ShapeDrawable(r);
+        shapeDrawable.getPaint().setColor(color);
+
+        return shapeDrawable;
+    }*/
 
 }
 //.___ End of CustomMaterialButton __./
