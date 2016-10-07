@@ -3,10 +3,15 @@ package josegonzalez.hephaestus.kouraikhryseai.widgets;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.content.res.TypedArray;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.RippleDrawable;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.view.View;
+
+import josegonzalez.hephaestus.kouraikhryseai.R;
 
 /**
  * .___
@@ -16,7 +21,7 @@ import android.util.AttributeSet;
  * __.
  */
 
-public class CustomMaterialButton extends CustomButton {
+public class CustomMaterialButton extends CustomButton implements View.OnTouchListener{
 
     public CustomMaterialButton(Context context) {
         super(context);
@@ -32,6 +37,16 @@ public class CustomMaterialButton extends CustomButton {
         initButton(context, attrs);
     }
 
+    protected void initButton(Context context, AttributeSet attrs) {
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomMaterialButton);
+        mColorDark = typedArray.getColor(R.styleable.CustomMaterialButton_colorDark, -1);
+        mColorLight = typedArray.getColor(R.styleable.CustomMaterialButton_colorLight, -1);
+
+        setText(getText());
+        typedArray.recycle();
+        setBackground();
+    }
+
     @Override
     protected void setBackground() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -39,6 +54,16 @@ public class CustomMaterialButton extends CustomButton {
         } else {
             setBackgroundDrawable(getButtonBackgroundStateList());
         }
+    }
+
+    public boolean onTouch(View v, MotionEvent event) {
+        if (event.getAction() == MotionEvent.ACTION_DOWN
+                || event.getAction() == MotionEvent.ACTION_BUTTON_PRESS
+                || event.getAction() == MotionEvent.ACTION_POINTER_DOWN) {
+            setSelected(true);
+            setSelected(false);
+        }
+        return true;
     }
 
     //.___ Ripple effect __./

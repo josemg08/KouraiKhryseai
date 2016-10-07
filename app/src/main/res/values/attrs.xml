@@ -18,5 +18,16 @@
         <attr name="colorLight"/>
     </declare-styleable>
 
+    <declare-styleable name="CircularColorButtonChanger">
+        <attr name="firstButtonText" format="string"/>
+        <attr name="secondButtonText" format="string"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+        <attr name="firstButtonColorDark" format="color"/>
+        <attr name="firstButtonColorLight" format="color"/>
+        <attr name="secondButtonColorDark" format="color"/>
+        <attr name="secondButtonColorLight" format="color"/>
+    </declare-styleable>
+
 </resources>
     <!--.___ End of attrs __.-->
