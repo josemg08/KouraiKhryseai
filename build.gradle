@@ -24,7 +24,7 @@ ext {
     minSdkVersion = 16
     targetSdkVersion = 22
     compileSdkVersion = 23
-    buildToolsVersion = '24.0.2'
+    buildToolsVersion = '23'
 
     //.___ App dependencies __./
     supportLibraryVersion = '24.2.1'

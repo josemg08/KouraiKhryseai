@@ -11,8 +11,6 @@ public class SandboxActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sandbox);
-        CircularColorButtonChanger circularColorButtonChanger =
-                (CircularColorButtonChanger) findViewById(R.id.circular_color_button_changer);
     }
 
 }

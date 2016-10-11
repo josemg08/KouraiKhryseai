@@ -1,11 +1,7 @@
 package josegonzalez.hephaestus.kouraikhryseai.widgets;
 
-import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.RippleDrawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -50,7 +46,8 @@ public class CustomMaterialButton extends CustomButton implements View.OnTouchLi
     @Override
     protected void setBackground() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            setBackgroundDrawable(getButtonBackgroundRippleDrawable(mColorLight, mColorDark));
+            setBackgroundDrawable(new MaterialDrawable()
+                    .getRoundedCornerButtonBackgroundRippleDrawable(mColorLight, mColorDark, mCornerRadius));
         } else {
             setBackgroundDrawable(getButtonBackgroundStateList());
         }
@@ -65,53 +62,6 @@ public class CustomMaterialButton extends CustomButton implements View.OnTouchLi
         }
         return true;
     }
-
-    //.___ Ripple effect __./
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public RippleDrawable getButtonBackgroundRippleDrawable(int normalColor, int pressedColor) {
-        return new RippleDrawable(getPressedColorSelector(pressedColor),
-                getDrawableFromColor(normalColor),
-                getDrawableFromColor(normalColor));
-    }
-
-    private ColorStateList getPressedColorSelector(int pressedColor) {
-        return new ColorStateList(
-                new int[][]{
-                        new int[]{android.R.attr.state_hovered},
-                        new int[]{android.R.attr.state_pressed},
-                        new int[]{android.R.attr.state_focused},
-                        new int[]{android.R.attr.state_focused, android.R.attr.state_pressed},
-                        new int[]{android.R.attr.state_first}
-                },
-                new int[] {
-                        pressedColor,
-                        pressedColor,
-                        pressedColor,
-                        pressedColor,
-                        pressedColor
-                }
-        );
-    }
-
-    public GradientDrawable getDrawableFromColor(int color) {
-        GradientDrawable drawable = new GradientDrawable();
-        drawable.setColor(color);
-        drawable.setCornerRadius(mCornerRadius);
-        return drawable;
-    }
-
-   /* private static Drawable getRippleMask(int color) {
-        float[] outerRadii = new float[8];
-        Arrays.fill(outerRadii, 3);// 3 is radius of final ripple, instead of 3 you can give required final radius
-
-        RoundRectShape r = new RoundRectShape(outerRadii, null, null);
-
-        ShapeDrawable shapeDrawable = new ShapeDrawable(r);
-        shapeDrawable.getPaint().setColor(color);
-
-        return shapeDrawable;
-    }*/
 
 }
 //.___ End of CustomMaterialButton __./
