@@ -18,9 +18,7 @@ import android.os.Build;
  */
 
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-public class MaterialDrawable {
-
-    //.___ Ripple effect __./
+class CustomMaterialButtonDrawable {
 
     public RippleDrawable getButtonBackgroundRippleDrawable(int normalColor, int pressedColor) {
         return new RippleDrawable(getPressedColorSelector(pressedColor),
@@ -28,7 +26,8 @@ public class MaterialDrawable {
                 getDrawableFromColor(normalColor));
     }
 
-    public RippleDrawable getRoundedCornerButtonBackgroundRippleDrawable(int normalColor, int pressedColor, int cornerRadius) {
+    RippleDrawable getRoundedCornerButtonBackgroundRippleDrawable(int normalColor,
+                                                                  int pressedColor, int cornerRadius) {
         return new RippleDrawable(getPressedColorSelector(pressedColor),
                 getRoundedCornerDrawableFromColor(normalColor, cornerRadius),
                 getRoundedCornerDrawableFromColor(normalColor, cornerRadius));
@@ -80,4 +79,4 @@ public class MaterialDrawable {
    }
 
 }
-//.___ MaterialDrawable __./
+//.___ CustomMaterialButtonDrawable __./

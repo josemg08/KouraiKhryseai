@@ -46,10 +46,11 @@ public class CustomMaterialButton extends CustomButton implements View.OnTouchLi
     @Override
     protected void setBackground() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            setBackgroundDrawable(new MaterialDrawable()
+            setBackgroundDrawable(new CustomMaterialButtonDrawable()
                     .getRoundedCornerButtonBackgroundRippleDrawable(mColorLight, mColorDark, mCornerRadius));
         } else {
-            setBackgroundDrawable(getButtonBackgroundStateList());
+            setBackgroundDrawable(new CustomButtonDrawable()
+                    .getButtonBackgroundStateList(mColorDark, mColorLight, mCornerRadius));
         }
     }
 

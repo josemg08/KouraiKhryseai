@@ -2,8 +2,6 @@ package josegonzalez.hephaestus.kouraikhryseai.widgets;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.StateListDrawable;
 import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 
@@ -48,22 +46,8 @@ public class CustomButton extends AppCompatButton {
     }
 
     protected void setBackground() {
-        setBackgroundDrawable(getButtonBackgroundStateList());
-    }
-
-    protected StateListDrawable getButtonBackgroundStateList(){
-        final StateListDrawable states = new StateListDrawable();
-
-        GradientDrawable drawable = new GradientDrawable();
-        drawable.setColor(mColorDark);
-        drawable.setCornerRadius(mCornerRadius);
-        states.addState(new int[]{android.R.attr.state_pressed}, drawable);
-
-        drawable = new GradientDrawable();
-        drawable.setColor(mColorLight);
-        drawable.setCornerRadius(mCornerRadius);
-        states.addState(new int[]{}, drawable);
-        return states;
+        setBackgroundDrawable(new CustomButtonDrawable()
+                .getButtonBackgroundStateList(mColorDark, mColorLight, mCornerRadius));
     }
 
     @Override
