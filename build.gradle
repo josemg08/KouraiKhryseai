@@ -4,7 +4,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0'
+        classpath 'com.android.tools.build:gradle:2.2.1'
     }
 }
 
@@ -24,7 +24,7 @@ ext {
     minSdkVersion = 16
     targetSdkVersion = 22
     compileSdkVersion = 23
-    buildToolsVersion = '23'
+    buildToolsVersion = '24'
 
     //.___ App dependencies __./
     supportLibraryVersion = '24.2.1'

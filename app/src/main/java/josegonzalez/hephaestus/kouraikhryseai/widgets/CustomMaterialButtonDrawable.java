@@ -20,20 +20,20 @@ import android.os.Build;
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 class CustomMaterialButtonDrawable {
 
-    public RippleDrawable getButtonBackgroundRippleDrawable(int normalColor, int pressedColor) {
+    public Drawable getButtonBackgroundRippleDrawable(int normalColor, int pressedColor) {
         return new RippleDrawable(getPressedColorSelector(pressedColor),
                 getDrawableFromColor(normalColor),
                 getDrawableFromColor(normalColor));
     }
 
-    RippleDrawable getRoundedCornerButtonBackgroundRippleDrawable(int normalColor,
+    Drawable getRoundedCornerButtonBackgroundRippleDrawable(int normalColor,
                                                                   int pressedColor, int cornerRadius) {
         return new RippleDrawable(getPressedColorSelector(pressedColor),
                 getRoundedCornerDrawableFromColor(normalColor, cornerRadius),
                 getRoundedCornerDrawableFromColor(normalColor, cornerRadius));
     }
 
-    public RippleDrawable getBorderLessButtonBackgroundRippleDrawable(int color) {
+    public Drawable getBorderLessButtonBackgroundRippleDrawable(int color) {
         return new RippleDrawable(getPressedColorSelector(color),
                 null,
                 getRippleBorderLessMask(color));
