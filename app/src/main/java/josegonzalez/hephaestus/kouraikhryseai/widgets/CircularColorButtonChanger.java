@@ -107,13 +107,17 @@ public class CircularColorButtonChanger extends RelativeLayout {
         });
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void selectButton(Button button, int startX, int startY) {
-        ViewAnimationUtils.createCircularReveal(button,
-                startX,
-                startY,
-                0,
-                button.getHeight()).start();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            ViewAnimationUtils.createCircularReveal(button,
+                    startX,
+                    startY,
+                    0,
+                    button.getHeight()).start();
+        }
+        else{
+            button.bringToFront();
+        }
     }
 
     public CustomButton getFirstButton(){

@@ -32,10 +32,10 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/white</item>
-        <item name="firstButtonColorDark">@color/colorAccentDark</item>
-        <item name="firstButtonColorLight">@color/colorAccent</item>
-        <item name="secondButtonColorDark">@color/colorPrimaryDark</item>
-        <item name="secondButtonColorLight">@color/colorPrimary</item>
+        <item name="firstButtonColorDark">@color/colorPrimaryDark</item>
+        <item name="firstButtonColorLight">@color/colorPrimary</item>
+        <item name="secondButtonColorDark">@color/colorAccentDark</item>
+        <item name="secondButtonColorLight">@color/colorAccent</item>
     </style>
 
 </resources>
