@@ -7,6 +7,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
+import josegonzalez.hephaestus.kouraikhryseai.modules.ButtonModule;
+
 public class SandboxActivity extends AppCompatActivity implements View.OnTouchListener{
 
     /*@Override
@@ -33,6 +35,9 @@ public class SandboxActivity extends AppCompatActivity implements View.OnTouchLi
 
         button.setOnTouchListener(this);
         constraintLayout.addView(button);
+
+        ButtonModule buttonModule = new ButtonModule(this);
+        buttonModule.JsonToModelParser("sampleScreenButtons.json");
     }
 
     public boolean onTouch(View view, MotionEvent event) {

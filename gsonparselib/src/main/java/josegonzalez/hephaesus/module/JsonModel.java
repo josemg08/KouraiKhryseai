@@ -33,7 +33,7 @@ public abstract class JsonModel {
         return id;
     }
 
-    public List<JsonModel> JsonToModelParser(String jsonURL) {
+    public abstract List<JsonModel> JsonToModelParser(String jsonURL); /*{
         Gson gson = new Gson();
         String json = null;
 
@@ -45,7 +45,7 @@ public abstract class JsonModel {
 
         Type listType = new TypeToken<ArrayList<JsonModel>>(){}.getType(); //Change JsonModel class for the child one
         return gson.fromJson(json, listType);
-    }
+    }*/
 
     protected String getJson(String JsonURL) throws IOException {
         String json = null;
