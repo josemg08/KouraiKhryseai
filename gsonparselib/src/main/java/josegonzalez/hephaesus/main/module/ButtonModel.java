@@ -1,6 +1,6 @@
-package josegonzalez.hephaestus.kouraikhryseai.modules;
+package josegonzalez.hephaesus.main.module;
 
-import josegonzalez.hephaesus.module.JsonModel;
+import josegonzalez.hephaesus.main.JsonModel;
 
 /**.___
  * Created by Jose Gonzalez

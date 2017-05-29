@@ -1,4 +1,4 @@
-package josegonzalez.hephaestus.kouraikhryseai.modules;
+package josegonzalez.hephaesus.main.module;
 
 import android.content.Context;
 
@@ -10,13 +10,12 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-import josegonzalez.hephaesus.module.JsonModel;
+import josegonzalez.hephaesus.main.JsonModel;
 import utils.JsonUtils;
 
-/**
- * Created by josegonzalez on 12/05/17.
- */
-
+/**.___
+ * Created by Jose Gonzalez on 12/05/17
+ __.*/
 public class ButtonModuleParser {
 
     private JsonUtils jsonUtils;
@@ -37,3 +36,4 @@ public class ButtonModuleParser {
     }
 
 }
+//.___ End of ButtonModuleParser __./

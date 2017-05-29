@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KouraiKhryseai.iml" filepath="$PROJECT_DIR$/KouraiKhryseai.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customizableview/customizableview.iml" filepath="$PROJECT_DIR$/customizableview/customizableview.iml" />
       <module fileurl="file://$PROJECT_DIR$/gsonparselib/gsonparselib.iml" filepath="$PROJECT_DIR$/gsonparselib/gsonparselib.iml" />
     </modules>
   </component>

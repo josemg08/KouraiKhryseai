@@ -1,2 +1,3 @@
-include ':app', ':gsonparselib'
+include ':app', ':gsonparselib', ':customizableview'
 project(':gsonparselib').projectDir = new File(settingsDir, 'gsonparselib')
+project(':customizableview').projectDir = new File(settingsDir, 'customizableview')

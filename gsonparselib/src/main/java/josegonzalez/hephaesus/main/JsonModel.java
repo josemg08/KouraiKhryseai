@@ -1,4 +1,4 @@
-package josegonzalez.hephaesus.module;
+package josegonzalez.hephaesus.main;
 
 /**.___
  * Created by Jose Gonzalez
