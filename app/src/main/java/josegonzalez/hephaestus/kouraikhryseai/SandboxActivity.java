@@ -7,7 +7,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
-import josegonzalez.hephaestus.kouraikhryseai.modules.ButtonModule;
+import java.util.List;
+
+import josegonzalez.hephaestus.kouraikhryseai.modules.ButtonModel;
+import josegonzalez.hephaestus.kouraikhryseai.modules.ButtonModuleParser;
+import josegonzalez.hephaesus.module.JsonModel;
 
 public class SandboxActivity extends AppCompatActivity implements View.OnTouchListener{
 
@@ -25,19 +29,29 @@ public class SandboxActivity extends AppCompatActivity implements View.OnTouchLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = new Button(this);
+        ButtonModuleParser buttonModuleParser = new ButtonModuleParser();
+        List<JsonModel> buttonList = buttonModuleParser.JsonToModelParser("sampleScreenButtons.json", this);
+
         ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.activity_main);
 
-        ConstraintLayout.LayoutParams layoutParams = new ConstraintLayout.LayoutParams(500, 500);
-        layoutParams.leftMargin = 50;
-        layoutParams.topMargin = 50;
-        button.setLayoutParams(layoutParams);
+        for(JsonModel buttonModel : buttonList){
+            Button button = new Button(this);
 
-        button.setOnTouchListener(this);
-        constraintLayout.addView(button);
+            ConstraintLayout.LayoutParams layoutParams =
+                    new ConstraintLayout.LayoutParams(((ButtonModel)buttonModel).getWidth(),
+                            ((ButtonModel)buttonModel).getHeight());
+            layoutParams.leftMargin = ((ButtonModel)buttonModel).getPositionX();
+            layoutParams.topMargin = ((ButtonModel)buttonModel).getPositionY();
+            button.setLayoutParams(layoutParams);
+            button.setOnTouchListener(this);
+            constraintLayout.addView(button);
 
-        ButtonModule buttonModule = new ButtonModule(this);
-        buttonModule.JsonToModelParser("sampleScreenButtons.json");
+            button.animate()
+                    .x(((ButtonModel)buttonModel).getPositionX())
+                    .y(((ButtonModel)buttonModel).getPositionY())
+                    .setDuration(0)
+                    .start();
+        }
     }
 
     public boolean onTouch(View view, MotionEvent event) {

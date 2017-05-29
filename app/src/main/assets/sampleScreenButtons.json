@@ -10,7 +10,7 @@
   {
     "name": "button2",
     "background" : "#CCCCCC",
-    "positionX" : 350,
+    "positionX" : 650,
     "positionY" : 350,
     "width" : 200,
     "height" : 200

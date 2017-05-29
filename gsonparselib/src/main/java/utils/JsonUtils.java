@@ -1,3 +1,5 @@
+package utils;
+
 import android.content.Context;
 
 import java.io.IOException;
@@ -8,7 +10,7 @@ import java.io.InputStream;
  __.*/
 public class JsonUtils {
 
-    protected String getJsonFromFile(String JsonURL, Context context) throws IOException {
+    public String getJsonFromFile(String JsonURL, Context context) throws IOException {
         String json = null;
         try {
             InputStream is = context.getAssets().open(JsonURL);
