@@ -1,33 +1,7 @@
-
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
-    }
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.compose) apply false
+    alias(libs.plugins.android.library) apply false
 }
-
-allprojects {
-    repositories {
-        jcenter()
-    }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-
-//.___ Define versions in a single place __./
-ext {
-    //.___ Sdk and tools __./
-    minSdkVersion = 16
-    targetSdkVersion = 22
-    compileSdkVersion = 23
-    buildToolsVersion = '24'
-
-    //.___ App dependencies __./
-    supportLibraryVersion = '24.2.1'
-}
-
-//.___ End of KouraiKhryseai project build gradle __./
