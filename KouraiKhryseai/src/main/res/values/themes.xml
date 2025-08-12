@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.KouraiKhryseai" parent="Theme.Material3.DayNight.NoActionBar" />
+    <style name="kk_theme" parent="Theme.Material3.DayNight.NoActionBar" />
 </resources>

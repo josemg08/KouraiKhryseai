@@ -8,6 +8,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import ar.imagin.kouraikhryseai.theme.KouraiKhryseaiTheme
 
+/**___.
+ * Created by Jose Gonzalez
+__.*/
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
