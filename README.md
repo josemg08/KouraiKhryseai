@@ -1,20 +1,18 @@
-![KouraiKhryseai Banner](kk_banner.png)
+![KouraiKhryseai Banner](app/src/main/res/drawable/kk_banner.webp)
 
-# KouraiKhryseai
+# <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> KouraiKhryseai
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.github.josemg08/kourai-khryseai)](https://search.maven.org/artifact/com.github.josemg08/kourai-khryseai)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/josemg08/KouraiKhryseai/blob/master/LICENSE)
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg)](https://android-arsenal.com/api?level=21)
 
 > "These are golden, and in appearance like living young women. There is intelligence in their hearts, and there is speech in them and strength..." - Homer, Iliad 18.417-420
 
-## Overview
+## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Overview
 
 KouraiKhryseai (from Ancient Greek: κοῦραι χρύσειαι, "golden maidens") is an elegant Android design system library inspired by Hephaestus's legendary automata. Just as these divine constructs assisted the master craftsman god in his forge, this library aims to empower Android developers in crafting beautiful and robust applications.
 
-## Features
-
-<img align="right" src="app/src/main/res/drawable/kk_ic_app.xml" width="100" />
+## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Features
 
 * **Atomic Design Principles** - Built following Brad Frost's methodology, organizing components from atoms to organisms
 * **Modular Architecture** - Highly composable components that can be used independently
@@ -22,22 +20,7 @@ KouraiKhryseai (from Ancient Greek: κοῦραι χρύσειαι, "golden maid
 * **Performance Optimized** - Lightweight implementation with minimal overhead
 * **Kotlin-First** - Written in Kotlin with modern Android development practices
 
-```groovy
-dependencies {
-    implementation 'com.github.josemg08:kourai-khryseai:1.0.0'
-}
-```
-
-### Quick Start
-
-Visit our [documentation site](https://josemg08.github.io/kourai-khryseai/) to learn more about:
-
-* [Component Library](https://josemg08.github.io/kourai-khryseai/components)
-* [Design Tokens](https://josemg08.github.io/kourai-khryseai/tokens)
-* [Theming System](https://josemg08.github.io/kourai-khryseai/theming)
-* [Usage Guidelines](https://josemg08.github.io/kourai-khryseai/guidelines)
-
-## Mythological Inspiration
+## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Mythological Inspiration
 
 In Homer's Iliad, Hephaestus - the god of craftsmanship, fire, and metallurgy - created golden handmaidens endowed with intelligence, speech, and divine knowledge. These remarkable automata served as his assistants in the divine forge, representing the perfect union of artistry and functionality.
 
