@@ -8,10 +8,6 @@ This guide will help you integrate KouraiKhryseai into your Android project.
 
 Add the following to your app-level `build.gradle` file:
 
-```kotlin
-dependencies {
-    implementation 'com.yourpackage:kourai-khryseai:1.0.0'
-}
 ```
 
 ## Basic Usage

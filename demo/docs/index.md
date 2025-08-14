@@ -27,5 +27,3 @@ This project follows standard Android library structure:
 
 - `demo/` - Sample application
 - `KouraiKhryseai/` - Main library module
-- `demo/` - Demo implementation
-- `docs/` - Documentation source
