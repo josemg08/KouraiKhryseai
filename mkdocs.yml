@@ -1,0 +1,23 @@
+site_name: KouraiKhryseai
+site_description: KouraiKhryseai Android Library Documentation
+site_author: Jose Maria Gonzales
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - API Reference: api-reference.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences
+
+plugins:
+  - search
