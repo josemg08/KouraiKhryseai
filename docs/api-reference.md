@@ -21,6 +21,7 @@ Initializes the library with the application context.
 KouraiKhryseai.initialize(this)
 ```
 
+
 ##### `doSomething(): String`
 Performs the main library function.
 
