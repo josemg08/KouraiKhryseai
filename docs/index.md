@@ -25,7 +25,7 @@ For detailed API information, see our [API Reference](api-reference.md).
 
 This project follows standard Android library structure:
 
-- `app/` - Sample application
+- `demo/` - Sample application
 - `KouraiKhryseai/` - Main library module
 - `demo/` - Demo implementation
 - `docs/` - Documentation source

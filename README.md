@@ -1,4 +1,4 @@
-![KouraiKhryseai Banner](app/src/main/res/drawable/kk_banner.webp)
+![KouraiKhryseai Banner](demo/src/main/res/drawable/kk_banner.webp)
 
 # <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> KouraiKhryseai
 
