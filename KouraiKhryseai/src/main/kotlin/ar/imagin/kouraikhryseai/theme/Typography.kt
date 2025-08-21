@@ -6,7 +6,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
-// Enhanced Material Design 3 Typography with complete type scale
+//.___ Enhanced Material Design 3 Typography with complete type scale __./
 val Typography = Typography(
     // Display styles - for large, high-emphasis text
     displayLarge = TextStyle(
@@ -31,7 +31,7 @@ val Typography = Typography(
         letterSpacing = 0.sp
     ),
 
-    // Headline styles - for high-emphasis, shorter text
+    //.___ Headline styles - for high-emphasis, shorter text __./
     headlineLarge = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
@@ -54,7 +54,7 @@ val Typography = Typography(
         letterSpacing = 0.sp
     ),
 
-    // Title styles - for medium-emphasis text
+    //.___ Title styles - for medium-emphasis text __./
     titleLarge = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Medium,
@@ -77,7 +77,7 @@ val Typography = Typography(
         letterSpacing = 0.1.sp
     ),
 
-    // Body styles - for longer-form writing
+    //.___ Body styles - for longer-form writing __./
     bodyLarge = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
@@ -100,7 +100,7 @@ val Typography = Typography(
         letterSpacing = 0.4.sp
     ),
 
-    // Label styles - for smaller, utilitarian text
+    //.___ Label styles - for smaller, utilitarian text __./
     labelLarge = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Medium,

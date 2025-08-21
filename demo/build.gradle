@@ -56,4 +56,4 @@ dependencies {
     implementation(project(":KouraiKhryseai"))
 }
 
-//.___ End of KouraiKhryseai lib build gradle __./
+//.___ End of KouraiKhryseai demo build gradle __./

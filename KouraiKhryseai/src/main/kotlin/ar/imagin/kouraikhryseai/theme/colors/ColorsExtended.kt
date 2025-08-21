@@ -1,13 +1,12 @@
-package ar.imagin.kouraikhryseai.theme
+package ar.imagin.kouraikhryseai.theme.colors
 
-import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
-// Extended color palette for brand-specific colors
+//.___ Extended color palette for brand-specific colors __./
 data class KExtendedColors(
     val success: Color,
     val onSuccess: Color,
@@ -48,7 +47,7 @@ val LocalExtendedColors = staticCompositionLocalOf {
     )
 }
 
-// Light theme extended colors
+//.___ Light theme extended colors __./
 val LightExtendedColors = KExtendedColors(
     success = Color(0xFF146C2E),
     onSuccess = Color.White,
@@ -68,7 +67,7 @@ val LightExtendedColors = KExtendedColors(
     onBrandContainer = KOceanGreen10,
 )
 
-// Dark theme extended colors
+//.___ Dark theme extended colors __./
 val DarkExtendedColors = KExtendedColors(
     success = Color(0xFF8ADB8F),
     onSuccess = Color(0xFF00390E),
@@ -88,7 +87,7 @@ val DarkExtendedColors = KExtendedColors(
     onBrandContainer = KOceanGreen90,
 )
 
-// Extension property to access extended colors
+//.___ Extension property to access extended colors __./
 val MaterialTheme.extendedColors: KExtendedColors
     @Composable
     @ReadOnlyComposable

@@ -1,13 +1,13 @@
-package ar.imagin.kouraikhryseai.theme
+package ar.imagin.kouraikhryseai.theme.colors
 
 import androidx.compose.ui.graphics.Color
 
-// Brand Colors
+//.___ Brand Colors __./
 val KOceanGreen = Color(0xFF20373b)
 val KDarkBlue = Color(0xFF161620)
 val KOrange = Color(0xFFff8800)
 
-// Extended Semantic Colors
+//.___ Extended Semantic Colors __./
 val KOceanGreen10 = Color(0xFF001416)
 val KOceanGreen20 = Color(0xFF00272A)
 val KOceanGreen30 = Color(0xFF003B40)
@@ -44,7 +44,7 @@ val KDarkBlue90 = Color(0xFFBCBCCC)
 val KDarkBlue95 = Color(0xFFDDDDE6)
 val KDarkBlue99 = Color(0xFFFEFEFF)
 
-// Neutral Colors
+//.___ Neutral Colors __./
 val Neutral10 = Color(0xFF191C1D)
 val Neutral20 = Color(0xFF2E3132)
 val Neutral90 = Color(0xFFE1E3E3)
@@ -57,7 +57,7 @@ val NeutralVariant60 = Color(0xFF899392)
 val NeutralVariant80 = Color(0xFFBEC9C7)
 val NeutralVariant90 = Color(0xFFDAE5E2)
 
-// Error Colors
+//.___ Error Colors __./
 val Error40 = Color(0xFFBA1A1A)
 val Error80 = Color(0xFFFFB4AB)
 val Error90 = Color(0xFFFFDAD6)
@@ -66,6 +66,6 @@ val OnError = Color(0xFFFFFFFF)
 val OnErrorContainer = Color(0xFF410002)
 val ErrorContainer = Color(0xFFFFDAD6)
 
-// Utility
+//.___ Utility __./
 val Transparent = Color(0x00ffffff)
 val Scrim = Color(0x80000000)

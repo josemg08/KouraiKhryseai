@@ -12,7 +12,7 @@ val Shapes = Shapes(
     extraLarge = RoundedCornerShape(28.dp)
 )
 
-// Custom brand shapes for specific use cases
+//.___ Custom brand shapes for specific use cases __./
 object KShapes {
     val button = RoundedCornerShape(12.dp)
     val card = RoundedCornerShape(16.dp)

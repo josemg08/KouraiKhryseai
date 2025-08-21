@@ -45,9 +45,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import ar.imagin.kouraikhryseai.theme.KTheme
 
-/**___.
- * Created by Jose Gonzalez
-__.*/
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -149,7 +146,7 @@ private fun TextCard(
             Text(
                 text = category.uppercase(),
                 style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.primary,
+                color = MaterialTheme.colorScheme.onPrimaryContainer,
                 modifier = Modifier
                     .background(
                         MaterialTheme.colorScheme.primaryContainer,

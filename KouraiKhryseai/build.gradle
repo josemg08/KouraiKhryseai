@@ -69,3 +69,5 @@ dependencies {
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
 }
+
+//.___ End of KouraiKhryseai lib build gradle __./
