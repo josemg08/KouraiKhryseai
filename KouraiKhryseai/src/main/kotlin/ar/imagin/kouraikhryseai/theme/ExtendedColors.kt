@@ -8,7 +8,7 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
 // Extended color palette for brand-specific colors
-data class KKExtendedColors(
+data class KExtendedColors(
     val success: Color,
     val onSuccess: Color,
     val successContainer: Color,
@@ -28,7 +28,7 @@ data class KKExtendedColors(
 )
 
 val LocalExtendedColors = staticCompositionLocalOf {
-    KKExtendedColors(
+    KExtendedColors(
         success = Color.Unspecified,
         onSuccess = Color.Unspecified,
         successContainer = Color.Unspecified,
@@ -49,7 +49,7 @@ val LocalExtendedColors = staticCompositionLocalOf {
 }
 
 // Light theme extended colors
-val LightExtendedColors = KKExtendedColors(
+val LightExtendedColors = KExtendedColors(
     success = Color(0xFF146C2E),
     onSuccess = Color.White,
     successContainer = Color(0xFFA6F2AA),
@@ -62,14 +62,14 @@ val LightExtendedColors = KKExtendedColors(
     onInfo = Color.White,
     infoContainer = Color(0xFFD1E4FF),
     onInfoContainer = Color(0xFF001D36),
-    brand = KKOceanGreen40,
+    brand = KOceanGreen40,
     onBrand = Color.White,
-    brandContainer = KKOceanGreen90,
-    onBrandContainer = KKOceanGreen10,
+    brandContainer = KOceanGreen90,
+    onBrandContainer = KOceanGreen10,
 )
 
 // Dark theme extended colors
-val DarkExtendedColors = KKExtendedColors(
+val DarkExtendedColors = KExtendedColors(
     success = Color(0xFF8ADB8F),
     onSuccess = Color(0xFF00390E),
     successContainer = Color(0xFF00531C),
@@ -82,14 +82,14 @@ val DarkExtendedColors = KKExtendedColors(
     onInfo = Color(0xFF003258),
     infoContainer = Color(0xFF00497D),
     onInfoContainer = Color(0xFFD1E4FF),
-    brand = KKOceanGreen80,
-    onBrand = KKOceanGreen10,
-    brandContainer = KKOceanGreen30,
-    onBrandContainer = KKOceanGreen90,
+    brand = KOceanGreen80,
+    onBrand = KOceanGreen10,
+    brandContainer = KOceanGreen30,
+    onBrandContainer = KOceanGreen90,
 )
 
 // Extension property to access extended colors
-val MaterialTheme.extendedColors: KKExtendedColors
+val MaterialTheme.extendedColors: KExtendedColors
     @Composable
     @ReadOnlyComposable
     get() = LocalExtendedColors.current

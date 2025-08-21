@@ -3,7 +3,7 @@ package ar.imagin.kouraikhryseai.theme
 import androidx.compose.ui.unit.dp
 
 // Spacing system following 8dp grid
-object KKSpacing {
+object KSpacing {
     val none = 0.dp
     val xs = 4.dp
     val sm = 8.dp
@@ -15,7 +15,7 @@ object KKSpacing {
 }
 
 // Elevation tokens for consistent shadows
-object KKElevation {
+object KElevation {
     val level0 = 0.dp
     val level1 = 1.dp
     val level2 = 3.dp
@@ -25,7 +25,7 @@ object KKElevation {
 }
 
 // Component dimensions
-object KKDimensions {
+object KDimensions {
     val minTouchTarget = 48.dp
     val buttonHeight = 40.dp
     val buttonHeightLarge = 56.dp

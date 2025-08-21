@@ -8,7 +8,7 @@ android {
     namespace 'ar.imagin.KouraiKhryseai'
     compileSdk 36
 
-    resourcePrefix 'kk_'
+    resourcePrefix 'k_'
 
     defaultConfig {
         minSdk 24

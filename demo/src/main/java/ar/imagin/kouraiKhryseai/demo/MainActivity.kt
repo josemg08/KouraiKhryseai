@@ -43,7 +43,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import ar.imagin.kouraikhryseai.theme.KKTheme
+import ar.imagin.kouraikhryseai.theme.KTheme
 
 /**___.
  * Created by Jose Gonzalez
@@ -60,7 +60,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 private fun MainScreen() {
-    KKTheme(dynamicColor = false) {
+    KTheme(dynamicColor = false) {
         var selectedTab by remember { mutableIntStateOf(0) }
         val listState = rememberLazyListState()
 

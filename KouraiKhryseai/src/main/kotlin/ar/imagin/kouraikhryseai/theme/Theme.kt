@@ -13,30 +13,30 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = KKOceanGreen80,
-    onPrimary = KKOceanGreen10,
-    primaryContainer = KKOceanGreen30,
-    onPrimaryContainer = KKOceanGreen90,
+    primary = KOceanGreen80,
+    onPrimary = KOceanGreen10,
+    primaryContainer = KOceanGreen30,
+    onPrimaryContainer = KOceanGreen90,
 
-    secondary = KKOrange80,
-    onSecondary = KKOrange10,
-    secondaryContainer = KKOrange30,
-    onSecondaryContainer = KKOrange90,
+    secondary = KOrange80,
+    onSecondary = KOrange10,
+    secondaryContainer = KOrange30,
+    onSecondaryContainer = KOrange90,
 
-    tertiary = KKOrange70,
-    onTertiary = KKOrange10,
-    tertiaryContainer = KKOrange20,
-    onTertiaryContainer = KKOrange95,
+    tertiary = KOrange70,
+    onTertiary = KOrange10,
+    tertiaryContainer = KOrange20,
+    onTertiaryContainer = KOrange95,
 
     error = Error80,
     onError = OnError,
     errorContainer = ErrorContainer,
     onErrorContainer = OnErrorContainer,
 
-    background = KKDarkBlue10,
-    onBackground = KKDarkBlue90,
-    surface = KKDarkBlue10,
-    onSurface = KKDarkBlue90,
+    background = KDarkBlue10,
+    onBackground = KDarkBlue90,
+    surface = KDarkBlue10,
+    onSurface = KDarkBlue90,
 
     surfaceVariant = NeutralVariant30,
     onSurfaceVariant = NeutralVariant80,
@@ -46,39 +46,39 @@ private val DarkColorScheme = darkColorScheme(
 
     scrim = Scrim,
 
-    inverseSurface = KKDarkBlue90,
-    inverseOnSurface = KKDarkBlue10,
-    inversePrimary = KKOceanGreen40,
+    inverseSurface = KDarkBlue90,
+    inverseOnSurface = KDarkBlue10,
+    inversePrimary = KOceanGreen40,
 
-    surfaceDim = KKDarkBlue10,
-    surfaceBright = KKDarkBlue40,
-    surfaceContainerLowest = KKDarkBlue10,
-    surfaceContainerLow = KKDarkBlue20,
-    surfaceContainer = KKDarkBlue30,
-    surfaceContainerHigh = KKDarkBlue40,
-    surfaceContainerHighest = KKDarkBlue50,
+    surfaceDim = KDarkBlue10,
+    surfaceBright = KDarkBlue40,
+    surfaceContainerLowest = KDarkBlue10,
+    surfaceContainerLow = KDarkBlue20,
+    surfaceContainer = KDarkBlue30,
+    surfaceContainerHigh = KDarkBlue40,
+    surfaceContainerHighest = KDarkBlue50,
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = KKOceanGreen40,
+    primary = KOceanGreen40,
     onPrimary = Color.White,
-    primaryContainer = KKOceanGreen90,
-    onPrimaryContainer = KKOceanGreen10,
+    primaryContainer = KOceanGreen90,
+    onPrimaryContainer = KOceanGreen10,
 
-    secondary = KKOrange40,
+    secondary = KOrange40,
     onSecondary = Color.White,
-    secondaryContainer = KKOrange90,
-    onSecondaryContainer = KKOrange10,
+    secondaryContainer = KOrange90,
+    onSecondaryContainer = KOrange10,
 
-    tertiary = KKOrange60,
+    tertiary = KOrange60,
     onTertiary = Color.White,
-    tertiaryContainer = KKOrange95,
-    onTertiaryContainer = KKOrange10,
+    tertiaryContainer = KOrange95,
+    onTertiaryContainer = KOrange10,
 
     error = Error40,
     onError = Color.White,
     errorContainer = Error90,
-    onErrorContainer = KKOrange10,
+    onErrorContainer = KOrange10,
 
     background = Neutral99,
     onBackground = Neutral10,
@@ -95,7 +95,7 @@ private val LightColorScheme = lightColorScheme(
 
     inverseSurface = Neutral20,
     inverseOnSurface = Neutral95,
-    inversePrimary = KKOceanGreen80,
+    inversePrimary = KOceanGreen80,
 
     surfaceDim = NeutralVariant90,
     surfaceBright = Neutral99,
@@ -107,7 +107,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun KKTheme(
+fun KTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = false, // Disabled by default to maintain brand identity
     content: @Composable () -> Unit
@@ -136,16 +136,16 @@ fun KKTheme(
 }
 
 // Convenience accessors for theme tokens
-object KKTheme {
-    val spacing: KKSpacing
-        @Composable get() = KKSpacing
+object KTheme {
+    val spacing: KSpacing
+        @Composable get() = KSpacing
 
-    val elevation: KKElevation
-        @Composable get() = KKElevation
+    val elevation: KElevation
+        @Composable get() = KElevation
 
-    val dimensions: KKDimensions
-        @Composable get() = KKDimensions
+    val dimensions: KDimensions
+        @Composable get() = KDimensions
 
-    val shapes: KKShapes
-        @Composable get() = KKShapes
+    val shapes: KShapes
+        @Composable get() = KShapes
 }

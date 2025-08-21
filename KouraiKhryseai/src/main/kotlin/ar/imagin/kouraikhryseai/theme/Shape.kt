@@ -13,7 +13,7 @@ val Shapes = Shapes(
 )
 
 // Custom brand shapes for specific use cases
-object KKShapes {
+object KShapes {
     val button = RoundedCornerShape(12.dp)
     val card = RoundedCornerShape(16.dp)
     val bottomSheet = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)
