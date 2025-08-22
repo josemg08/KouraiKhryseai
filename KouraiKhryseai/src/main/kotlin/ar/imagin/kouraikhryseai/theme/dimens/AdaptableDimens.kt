@@ -17,24 +17,28 @@ package ar.imagin.kouraikhryseai.theme.dimens
 
 import androidx.compose.ui.unit.dp
 
-open class DimensDefault(
+/**.___
+ * The AdaptableDimens adjusts the size of each dimension to better fit different screens.
+ * @delta support value to increase or decrease all sizes
+ * __.*/
+data class AdaptableDimens(val delta: Float = 1f) : KDimensions(
     /**.___
      * Spacing system following 8dp grid
      * Common use cases:
      *  - margins - paddings - dividers
      * Ideal for distances
      * __.*/
-    spacing: Spacing = Spacing(
+    spacing = Spacing(
         spacing0 = 0.dp,
-        spacing1 = 1.dp,
-        spacing2 = 2.dp,
-        spacing3 = 4.dp,
-        spacing4 = 8.dp,
-        spacing5 = 16.dp,
-        spacing6 = 24.dp,
-        spacing7 = 32.dp,
-        spacing8 = 48.dp,
-        spacing9 = 64.dp
+        spacing1 = (1 * delta).dp,
+        spacing2 = (2 * delta).dp,
+        spacing3 = (4 * delta).dp,
+        spacing4 = (8 * delta).dp,
+        spacing5 = (16 * delta).dp,
+        spacing6 = (24 * delta).dp,
+        spacing7 = (32 * delta).dp,
+        spacing8 = (48 * delta).dp,
+        spacing9 = (64 * delta).dp
     ),
     /**.___
      * For general use, this correspond to natural sizes according to the Fibonacci sequence
@@ -43,44 +47,44 @@ open class DimensDefault(
      *  - Composables - Views
      * Ideal for any component with a fixed size
      *  __.*/
-    componentSize: ComponentSizes = ComponentSizes(
+    componentSize = ComponentSizes(
         none = 0.dp,
-        tiny = 1.dp,
-        xxxSmall = 2.dp,
-        xxSmall = 3.dp,
-        xSmall = 5.dp,
-        small = 8.dp,
-        medium = 13.dp,
-        large = 21.dp,
-        xLarge = 34.dp,
-        xxLarge = 55.dp,
-        xxxLarge = 89.dp,
-        huge = 144.dp,
-        xHuge = 233.dp,
-        xxHuge = 377.dp,
-        xxxHuge = 610.dp,
-        colossal = 987.dp
+        tiny = (1 * delta).dp,
+        xxxSmall = (2 * delta).dp,
+        xxSmall = (3 * delta).dp,
+        xSmall = (5 * delta).dp,
+        small = (8 * delta).dp,
+        medium = (13 * delta).dp,
+        large = (21 * delta).dp,
+        xLarge = (34 * delta).dp,
+        xxLarge = (55 * delta).dp,
+        xxxLarge = (89 * delta).dp,
+        huge = (144 * delta).dp,
+        xHuge = (233 * delta).dp,
+        xxHuge = (377 * delta).dp,
+        xxxHuge = (610 * delta).dp,
+        colossal = (987 * delta).dp
     ),
     /**.___ Elevation tokens for consistent shadows, following Material Design __.*/
-    elevation: Elevation = Elevation(
+    elevation = Elevation(
         level0 = 0.dp,
-        level1 = 2.dp,
-        level2 = 4.dp,
-        level3 = 8.dp,
+        level1 = (2 * delta).dp,
+        level2 = (4 * delta).dp,
+        level3 = (8 * delta).dp
     ),
     /**.___ Radius tokens for consistent corners __.*/
-    radius: Radius = Radius(
+    radius = Radius(
         radius0 = 0.dp,
-        radius1 = 4.dp,
-        radius2 = 8.dp,
-        radius3 = 12.dp,
-        radius4 = 16.dp,
+        radius1 = (4 * delta).dp,
+        radius2 = (8 * delta).dp,
+        radius3 = (12 * delta).dp,
+        radius4 = (16 * delta).dp
     ),
     /**.___ Line tokens for strokes and borders __.*/
-    border: Borders = Borders(
-        border1 = 1.dp,
-        border2 = 2.dp,
-        border3 = 4.dp
+    border = Borders(
+        border1 = (1 * delta).dp,
+        border2 = (2 * delta).dp,
+        border3 = (4 * delta).dp
     ),
     /**.___
      * Dimensions to achieve the best results for most users, including people with accessibility needs.
@@ -89,27 +93,20 @@ open class DimensDefault(
      *  - Material Design -> https://m3.material.io/foundations/overview/principles
      *  - (WCAG) 2.1 -> https://www.w3.org/TR/WCAG21/
      *  __.*/
-    accessibilityDimensions: AccessibilityDimensions = AccessibilityDimensions(
+    accessibilityDimensions = AccessibilityDimensions(
         // Minimum touch target size (48x48dp)
-        minTouchTarget = 48.dp,
+        minTouchTarget = (48 * delta).dp,
         // Recommended spacing between touchable elements
-        minTouchTargetSpacing = 8.dp,
+        minTouchTargetSpacing = (8 * delta).dp,
         // Minimum text element height for better touch targets
-        minTextElementHeight = 48.dp,
+        minTextElementHeight = (48 * delta).dp,
         // Minimum width for interactive elements like buttons
-        minInteractiveElementWidth = 64.dp,
+        minInteractiveElementWidth = (64 * delta).dp,
         // Recommended size for important icons
-        accessibleIconSize = 24.dp,
+        accessibleIconSize = (24 * delta).dp,
         // Minimum FAB size
-        minFabSize = 56.dp,
+        minFabSize = (56 * delta).dp,
         // Touch safe area padding
-        touchSafeAreaPadding = 12.dp
+        touchSafeAreaPadding = (12 * delta).dp
     )
-) : KDimensions(
-    spacing = spacing,
-    imageSize = componentSize,
-    elevation = elevation,
-    radius = radius,
-    border = border,
-    accessibilityDimensions = accessibilityDimensions
 )

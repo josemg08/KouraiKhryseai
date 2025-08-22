@@ -2,11 +2,11 @@ package ar.imagin.kouraikhryseai.theme.dimens
 
 /**.___
     ================================================================================
-                SCREEN COMPATIBILITY: IMPORTANT DIMENSION GUIDELINES
+                    SCREEN COMPATIBILITY: DIMENSION GUIDELINES
     ================================================================================
-    To ensure proper support for larger screens, define specific dimensions here.
+    To ensure proper support for Smaller Screens, define specific dimensions here.
     As a general rule:
-        Multiply default dimensions by 1.5 for larger variants of SW600.
+        Multiply default dimensions by the Deltas provided in this file
 
     SCREEN SIZE QUALIFIERS: DEPRECATED vs RECOMMENDED
 
@@ -21,7 +21,7 @@ package ar.imagin.kouraikhryseai.theme.dimens
     defines layout resources based on the smallest dimension of the screen,
     regardless of orientation. This provides a more robust and flexible way to target screen sizes.
 
-    In summary, `layout-large` and similar older qualifiers are deprecated.
+    In summary, `layout-small` and similar older qualifiers are deprecated.
     The `layout-sw<N>dp` qualifiers should be used instead for modern Android development.
 
     For comprehensive details on screen compatibility, refer to:
@@ -30,4 +30,37 @@ package ar.imagin.kouraikhryseai.theme.dimens
         - Display Sizes: https://developer.android.com/develop/ui/compose/layouts/adaptive/support-different-display-sizes
         - Resources overview: https://developer.android.com/guide/topics/resources/providing-resources
     ================================================================================
-__.*/
+.--*/
+object SWOptimizationConstants {
+    /**
+     * Delta multiplier for screens smaller than sw360dp.
+     * Reduces dimensions to 75% of default size.
+     */
+    const val SMALL_SCREEN_DELTA = 0.75f
+
+    /**
+     * Delta multiplier for screens larger than sw600dp (tablets).
+     * Increases dimensions to 150% of default size.
+     */
+    const val LARGE_SCREEN_DELTA = 1.5f
+
+    /**
+     * Common screen width breakpoints in dp.
+     * Used for determining which delta to apply.
+     */
+    object Breakpoints {
+        const val SMALL_SCREEN = 360
+        const val TABLET = 600
+        const val LARGE_TABLET = 840
+    }
+
+    /**
+     * Returns appropriate delta based on screen width.
+     * @param screenWidthDp smallest width of the screen in dp
+     */
+    fun getDeltaForScreenWidth(screenWidthDp: Int): Float = when {
+        screenWidthDp < Breakpoints.SMALL_SCREEN -> SMALL_SCREEN_DELTA
+        screenWidthDp >= Breakpoints.TABLET -> LARGE_SCREEN_DELTA
+        else -> 1f
+    }
+}

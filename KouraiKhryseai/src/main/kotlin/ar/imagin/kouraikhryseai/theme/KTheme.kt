@@ -8,14 +8,16 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalWindowInfo
 import ar.imagin.kouraikhryseai.theme.colors.DarkColorScheme
 import ar.imagin.kouraikhryseai.theme.colors.DarkExtendedColors
 import ar.imagin.kouraikhryseai.theme.colors.LightColorScheme
 import ar.imagin.kouraikhryseai.theme.colors.LightExtendedColors
 import ar.imagin.kouraikhryseai.theme.colors.LocalExtendedColors
+import ar.imagin.kouraikhryseai.theme.dimens.AdaptableDimens
 import ar.imagin.kouraikhryseai.theme.dimens.KDimensions
-import ar.imagin.kouraikhryseai.theme.dimens.Elevation
-import ar.imagin.kouraikhryseai.theme.dimens.Spacing
+import ar.imagin.kouraikhryseai.theme.dimens.SWOptimizationConstants
 
 @Composable
 fun KTheme(
@@ -48,14 +50,17 @@ fun KTheme(
 
 //.___ Convenience accessors for theme tokens __./
 object KTheme {
-    val spacing: Spacing
-        @Composable get() = Spacing
-
-    val elevation: Elevation
-        @Composable get() = Elevation
-
     val dimensions: KDimensions
-        @Composable get() = KDimensions
+        @Composable get() {
+            val windowInfo = LocalWindowInfo.current
+            val screenWidthDp = with(LocalDensity.current) {
+                windowInfo.containerSize.width.toDp()
+            }.value.toInt()
+
+            return AdaptableDimens(
+                delta = SWOptimizationConstants.getDeltaForScreenWidth(screenWidthDp)
+            )
+        }
 
     val shapes: KShapes
         @Composable get() = KShapes
