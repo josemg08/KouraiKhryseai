@@ -42,7 +42,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
 import ar.imagin.kouraikhryseai.theme.KTheme
 
 class MainActivity : ComponentActivity() {
@@ -79,14 +78,14 @@ private fun MainScreen() {
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(paddingValues)
-                    .padding(horizontal = 16.dp),
-                verticalArrangement = Arrangement.spacedBy(12.dp)
+                    .padding(horizontal = KTheme.dimensions.spacing.spacing5),
+                verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.spacing.spacing5)
             ) {
                 item {
                     // Header section
                     Column(
-                        modifier = Modifier.padding(vertical = 24.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                        modifier = Modifier.padding(vertical = KTheme.dimensions.spacing.spacing6),
+                        verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.spacing.spacing4)
                     ) {
                         Text(
                             text = "Kourai Khryseai",
@@ -112,7 +111,7 @@ private fun MainScreen() {
 
                 item {
                     // Bottom spacing for navigation bar
-                    Box(modifier = Modifier.padding(bottom = 16.dp))
+                    Box(modifier = Modifier.padding(bottom = KTheme.dimensions.spacing.spacing5))
                 }
             }
         }
@@ -128,19 +127,19 @@ private fun TextCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp)),
+            .clip(RoundedCornerShape(KTheme.dimensions.radius.radius4)),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceContainer
         ),
         elevation = CardDefaults.cardElevation(
-            defaultElevation = 2.dp
+            defaultElevation = KTheme.dimensions.elevation.level1
         )
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(20.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+                .padding(KTheme.dimensions.spacing.spacing6),
+            verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.spacing.spacing5)
         ) {
             // Category badge
             Text(
@@ -150,9 +149,11 @@ private fun TextCard(
                 modifier = Modifier
                     .background(
                         MaterialTheme.colorScheme.primaryContainer,
-                        RoundedCornerShape(6.dp)
+                        RoundedCornerShape(KTheme.dimensions.radius.radius2)
                     )
-                    .padding(horizontal = 8.dp, vertical = 4.dp)
+                    .padding(
+                        horizontal = KTheme.dimensions.spacing.spacing4,
+                        vertical = KTheme.dimensions.spacing.spacing3)
             )
 
             // Title

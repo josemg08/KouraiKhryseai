@@ -2,8 +2,8 @@
 .gradle
 /local.properties
 /.kotlin
-/.idea/*
-!/.idea/icon.svg
+.idea/
+!.idea/icon.svg
 .DS_Store
 /build
 /captures
