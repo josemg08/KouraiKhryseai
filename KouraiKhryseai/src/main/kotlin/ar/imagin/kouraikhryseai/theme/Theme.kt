@@ -13,6 +13,9 @@ import ar.imagin.kouraikhryseai.theme.colors.DarkExtendedColors
 import ar.imagin.kouraikhryseai.theme.colors.LightColorScheme
 import ar.imagin.kouraikhryseai.theme.colors.LightExtendedColors
 import ar.imagin.kouraikhryseai.theme.colors.LocalExtendedColors
+import ar.imagin.kouraikhryseai.theme.dimens.KDimensions
+import ar.imagin.kouraikhryseai.theme.dimens.Elevation
+import ar.imagin.kouraikhryseai.theme.dimens.Spacing
 
 @Composable
 fun KTheme(
@@ -45,11 +48,11 @@ fun KTheme(
 
 //.___ Convenience accessors for theme tokens __./
 object KTheme {
-    val spacing: KSpacing
-        @Composable get() = KSpacing
+    val spacing: Spacing
+        @Composable get() = Spacing
 
-    val elevation: KElevation
-        @Composable get() = KElevation
+    val elevation: Elevation
+        @Composable get() = Elevation
 
     val dimensions: KDimensions
         @Composable get() = KDimensions
