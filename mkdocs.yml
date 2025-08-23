@@ -1,6 +1,6 @@
 site_name: KouraiKhryseai
 site_description: KouraiKhryseai Android Library Documentation
-site_author: Jose Maria Gonzales
+site_author: Jose Gonzalez
 docs_dir: demo/docs
 
 theme:
