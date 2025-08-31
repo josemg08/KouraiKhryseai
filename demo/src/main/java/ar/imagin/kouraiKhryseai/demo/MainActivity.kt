@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
@@ -39,11 +38,11 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import ar.imagin.kouraikhryseai.theme.KTheme
+import ar.imagin.kouraikhryseai.theme.colors.extendedColors
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -127,8 +126,8 @@ private fun TextCard(
 ) {
     Card(
         modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(KTheme.dimensions.radius.radius4)),
+            .fillMaxWidth(),
+        shape = KTheme.shapes.card,
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceContainer
         ),
@@ -146,15 +145,16 @@ private fun TextCard(
             Text(
                 text = category.uppercase(),
                 style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onPrimaryContainer,
+                color = MaterialTheme.colorScheme.onSecondary,
                 modifier = Modifier
                     .background(
-                        MaterialTheme.colorScheme.primaryContainer,
-                        RoundedCornerShape(KTheme.dimensions.radius.radius2)
+                        MaterialTheme.colorScheme.secondary,
+                        KTheme.shapes.chip
                     )
                     .padding(
                         horizontal = KTheme.dimensions.size.size5,
-                        vertical = KTheme.dimensions.size.size3)
+                        vertical = KTheme.dimensions.size.size3
+                    )
             )
 
             // Title

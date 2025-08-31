@@ -1,62 +1,48 @@
 package ar.imagin.kouraikhryseai.theme.colors
 
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
+import ar.imagin.kouraikhryseai.theme.KTheme
 
-//.___ Extended color palette for brand-specific colors __./
 data class KExtendedColors(
+    // Success colors follow Material3 patterns
     val success: Color,
     val onSuccess: Color,
     val successContainer: Color,
     val onSuccessContainer: Color,
+    // Warning colors follow Material3 patterns
     val warning: Color,
     val onWarning: Color,
     val warningContainer: Color,
     val onWarningContainer: Color,
+    // Info colors follow Material3 patterns
     val info: Color,
     val onInfo: Color,
     val infoContainer: Color,
     val onInfoContainer: Color,
+    // Brand colors follow Material3 patterns
     val brand: Color,
     val onBrand: Color,
     val brandContainer: Color,
     val onBrandContainer: Color,
 )
 
-val LocalExtendedColors = staticCompositionLocalOf {
-    KExtendedColors(
-        success = Color.Unspecified,
-        onSuccess = Color.Unspecified,
-        successContainer = Color.Unspecified,
-        onSuccessContainer = Color.Unspecified,
-        warning = Color.Unspecified,
-        onWarning = Color.Unspecified,
-        warningContainer = Color.Unspecified,
-        onWarningContainer = Color.Unspecified,
-        info = Color.Unspecified,
-        onInfo = Color.Unspecified,
-        infoContainer = Color.Unspecified,
-        onInfoContainer = Color.Unspecified,
-        brand = Color.Unspecified,
-        onBrand = Color.Unspecified,
-        brandContainer = Color.Unspecified,
-        onBrandContainer = Color.Unspecified,
-    )
+val LocalExtendedColors = staticCompositionLocalOf<KExtendedColors> {
+    error("No ExtendedColors provided")
 }
 
-//.___ Light theme extended colors __./
+// Light theme colors using Material3 color rules
 val LightExtendedColors = KExtendedColors(
     success = Color(0xFF146C2E),
     onSuccess = Color.White,
     successContainer = Color(0xFFA6F2AA),
     onSuccessContainer = Color(0xFF002106),
-    warning = Color(0xFFB25F00),
+    warning = Orange40,
     onWarning = Color.White,
-    warningContainer = Color(0xFFFFDCC2),
-    onWarningContainer = Color(0xFF381C00),
+    warningContainer = Orange90,
+    onWarningContainer = Orange10,
     info = Color(0xFF0061A4),
     onInfo = Color.White,
     infoContainer = Color(0xFFD1E4FF),
@@ -67,16 +53,16 @@ val LightExtendedColors = KExtendedColors(
     onBrandContainer = OceanGreen10,
 )
 
-//.___ Dark theme extended colors __./
+// Dark theme colors using Material3 color rules
 val DarkExtendedColors = KExtendedColors(
     success = Color(0xFF8ADB8F),
     onSuccess = Color(0xFF00390E),
     successContainer = Color(0xFF00531C),
     onSuccessContainer = Color(0xFFA6F2AA),
-    warning = Color(0xFFFFB68A),
-    onWarning = Color(0xFF5C2E00),
-    warningContainer = Color(0xFF834600),
-    onWarningContainer = Color(0xFFFFDCC2),
+    warning = Orange80,
+    onWarning = Orange10,
+    warningContainer = Orange30,
+    onWarningContainer = Orange90,
     info = Color(0xFF9ECAFF),
     onInfo = Color(0xFF003258),
     infoContainer = Color(0xFF00497D),
@@ -87,8 +73,7 @@ val DarkExtendedColors = KExtendedColors(
     onBrandContainer = OceanGreen90,
 )
 
-//.___ Extension property to access extended colors __./
-val MaterialTheme.extendedColors: KExtendedColors
+val KTheme.extendedColors: KExtendedColors
     @Composable
     @ReadOnlyComposable
     get() = LocalExtendedColors.current
