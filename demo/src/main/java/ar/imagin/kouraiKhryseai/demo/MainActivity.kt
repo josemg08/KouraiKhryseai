@@ -42,6 +42,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import ar.imagin.kouraikhryseai.theme.KTheme
 
 class MainActivity : ComponentActivity() {
@@ -267,3 +268,68 @@ private fun createSampleTexts(): List<TextItem> = listOf(
         category = "Urban Life"
     )
 )
+
+@Preview
+@Composable
+private fun MainScreenPreview() {
+    KTheme(dynamicColor = false) {
+        var selectedTab by remember { mutableIntStateOf(0) }
+        val listState = rememberLazyListState()
+
+        Scaffold(
+            modifier = Modifier
+                .fillMaxSize()
+                .windowInsetsPadding(WindowInsets.statusBars),
+            containerColor = MaterialTheme.colorScheme.background,
+            contentWindowInsets = WindowInsets(0),
+            bottomBar = {
+                BottomNavigationBar(
+                    selectedTab = selectedTab,
+                    onTabSelected = { selectedTab = it }
+                )
+            }
+        ) { paddingValues ->
+            LazyColumn(
+                state = listState,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(paddingValues)
+                    .padding(horizontal = KTheme.dimensions.size.size6),
+                verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.size.size6)
+            ) {
+                item {
+                    // Header section
+                    Column(
+                        modifier = Modifier.padding(vertical = KTheme.dimensions.size.size7),
+                        verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.size.size5)
+                    ) {
+                        Text(
+                            text = "Kourai Khryseai",
+                            style = MaterialTheme.typography.displaySmall,
+                            color = MaterialTheme.colorScheme.onBackground,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Golden Hour Collection",
+                            style = MaterialTheme.typography.titleMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                }
+
+                items(createSampleTexts()) { textItem ->
+                    TextCard(
+                        title = textItem.title,
+                        content = textItem.content,
+                        category = textItem.category
+                    )
+                }
+
+                item {
+                    // Bottom spacing for navigation bar
+                    Box(modifier = Modifier.padding(bottom = KTheme.dimensions.size.size6))
+                }
+            }
+        }
+    }
+}

@@ -42,7 +42,7 @@ fun KTheme(
         MaterialTheme(
             colorScheme = colorScheme,
             typography = Typography,
-            shapes = Shapes,
+            shapes = getShapes().material,
             content = content
         )
     }
@@ -62,6 +62,5 @@ object KTheme {
             )
         }
 
-    val shapes: KShapes
-        @Composable get() = KShapes
+    val shapes @Composable get() = getShapes()
 }

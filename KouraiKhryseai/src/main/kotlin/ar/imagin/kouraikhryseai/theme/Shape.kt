@@ -2,23 +2,37 @@ package ar.imagin.kouraikhryseai.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes
-import androidx.compose.ui.unit.dp
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Shape
 
-val Shapes = Shapes(
-    extraSmall = RoundedCornerShape(4.dp),
-    small = RoundedCornerShape(8.dp),
-    medium = RoundedCornerShape(12.dp),
-    large = RoundedCornerShape(16.dp),
-    extraLarge = RoundedCornerShape(28.dp)
+data class ExtendedShapes(
+    val material: Shapes,
+    val button: Shape,
+    val card: Shape,
+    val bottomSheet: Shape,
+    val dialog: Shape,
+    val fab: Shape,
+    val chip: Shape,
+    val pill: Shape
 )
 
-//.___ Custom brand shapes for specific use cases __./
-object KShapes {
-    val button = RoundedCornerShape(12.dp)
-    val card = RoundedCornerShape(16.dp)
-    val bottomSheet = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)
-    val dialog = RoundedCornerShape(24.dp)
-    val fab = RoundedCornerShape(16.dp)
-    val chip = RoundedCornerShape(8.dp)
-    val pill = RoundedCornerShape(50)
-}
+@Composable
+fun getShapes() = ExtendedShapes(
+    material = Shapes(
+        extraSmall = RoundedCornerShape(KTheme.dimensions.radius.radius2),
+        small = RoundedCornerShape(KTheme.dimensions.radius.radius3),
+        medium = RoundedCornerShape(KTheme.dimensions.radius.radius4),
+        large = RoundedCornerShape(KTheme.dimensions.radius.radius5),
+        extraLarge = RoundedCornerShape(KTheme.dimensions.size.size8)
+    ),
+    button = RoundedCornerShape(KTheme.dimensions.radius.radius4),
+    card = RoundedCornerShape(KTheme.dimensions.radius.radius5),
+    bottomSheet = RoundedCornerShape(
+        topStart = KTheme.dimensions.size.size8,
+        topEnd = KTheme.dimensions.size.size8
+    ),
+    dialog = RoundedCornerShape(KTheme.dimensions.size.size7),
+    fab = RoundedCornerShape(KTheme.dimensions.radius.radius5),
+    chip = RoundedCornerShape(KTheme.dimensions.radius.radius3),
+    pill = RoundedCornerShape(50)
+)
