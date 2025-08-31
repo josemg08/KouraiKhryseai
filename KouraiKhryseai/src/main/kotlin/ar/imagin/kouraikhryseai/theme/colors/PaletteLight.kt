@@ -4,25 +4,25 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
 val LightColorScheme = lightColorScheme(
-    primary = KOceanGreen40,
+    primary = OceanGreen40,
     onPrimary = Color.White,
-    primaryContainer = KOceanGreen90,
-    onPrimaryContainer = KOceanGreen10,
+    primaryContainer = OceanGreen90,
+    onPrimaryContainer = OceanGreen10,
 
-    secondary = KOrange40,
+    secondary = Orange40,
     onSecondary = Color.White,
-    secondaryContainer = KOrange90,
-    onSecondaryContainer = KOrange10,
+    secondaryContainer = Orange90,
+    onSecondaryContainer = Orange10,
 
-    tertiary = KOrange60,
+    tertiary = Orange60,
     onTertiary = Color.White,
-    tertiaryContainer = KOrange95,
-    onTertiaryContainer = KOrange10,
+    tertiaryContainer = Orange95,
+    onTertiaryContainer = Orange10,
 
     error = Error40,
     onError = Color.White,
     errorContainer = Error90,
-    onErrorContainer = KOrange10,
+    onErrorContainer = Orange10,
 
     background = Neutral99,
     onBackground = Neutral10,
@@ -39,7 +39,7 @@ val LightColorScheme = lightColorScheme(
 
     inverseSurface = Neutral20,
     inverseOnSurface = Neutral95,
-    inversePrimary = KOceanGreen80,
+    inversePrimary = OceanGreen80,
 
     surfaceDim = NeutralVariant90,
     surfaceBright = Neutral99,

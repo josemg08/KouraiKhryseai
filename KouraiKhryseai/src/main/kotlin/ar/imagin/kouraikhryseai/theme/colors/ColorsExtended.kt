@@ -61,10 +61,10 @@ val LightExtendedColors = KExtendedColors(
     onInfo = Color.White,
     infoContainer = Color(0xFFD1E4FF),
     onInfoContainer = Color(0xFF001D36),
-    brand = KOceanGreen40,
+    brand = OceanGreen40,
     onBrand = Color.White,
-    brandContainer = KOceanGreen90,
-    onBrandContainer = KOceanGreen10,
+    brandContainer = OceanGreen90,
+    onBrandContainer = OceanGreen10,
 )
 
 //.___ Dark theme extended colors __./
@@ -81,10 +81,10 @@ val DarkExtendedColors = KExtendedColors(
     onInfo = Color(0xFF003258),
     infoContainer = Color(0xFF00497D),
     onInfoContainer = Color(0xFFD1E4FF),
-    brand = KOceanGreen80,
-    onBrand = KOceanGreen10,
-    brandContainer = KOceanGreen30,
-    onBrandContainer = KOceanGreen90,
+    brand = OceanGreen80,
+    onBrand = OceanGreen10,
+    brandContainer = OceanGreen30,
+    onBrandContainer = OceanGreen90,
 )
 
 //.___ Extension property to access extended colors __./

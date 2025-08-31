@@ -4,30 +4,30 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.ui.graphics.Color
 
 val DarkColorScheme = darkColorScheme(
-    primary = KOceanGreen80,
-    onPrimary = KOceanGreen10,
-    primaryContainer = KOrange80,
+    primary = OceanGreen80,
+    onPrimary = OceanGreen10,
+    primaryContainer = Orange80,
     onPrimaryContainer = Color.Black,
 
-    secondary = KOrange80,
-    onSecondary = KOrange10,
-    secondaryContainer = KOrange30,
-    onSecondaryContainer = KOrange90,
+    secondary = Orange80,
+    onSecondary = Orange10,
+    secondaryContainer = Orange30,
+    onSecondaryContainer = Orange90,
 
-    tertiary = KOrange70,
-    onTertiary = KOrange10,
-    tertiaryContainer = KOrange20,
-    onTertiaryContainer = KOrange95,
+    tertiary = Orange70,
+    onTertiary = Orange10,
+    tertiaryContainer = Orange20,
+    onTertiaryContainer = Orange95,
 
     error = Error80,
     onError = OnError,
     errorContainer = ErrorContainer,
     onErrorContainer = OnErrorContainer,
 
-    background = KDarkBlue10,
-    onBackground = KDarkBlue90,
-    surface = KDarkBlue10,
-    onSurface = KDarkBlue90,
+    background = DarkBlue10,
+    onBackground = DarkBlue90,
+    surface = DarkBlue10,
+    onSurface = DarkBlue90,
 
     surfaceVariant = NeutralVariant30,
     onSurfaceVariant = NeutralVariant80,
@@ -37,15 +37,15 @@ val DarkColorScheme = darkColorScheme(
 
     scrim = Scrim,
 
-    inverseSurface = KDarkBlue90,
-    inverseOnSurface = KDarkBlue10,
-    inversePrimary = KOceanGreen40,
+    inverseSurface = DarkBlue90,
+    inverseOnSurface = DarkBlue10,
+    inversePrimary = OceanGreen40,
 
-    surfaceDim = KDarkBlue10,
-    surfaceBright = KDarkBlue40,
-    surfaceContainerLowest = KDarkBlue10,
-    surfaceContainerLow = KDarkBlue20,
-    surfaceContainer = KDarkBlue30,
-    surfaceContainerHigh = KDarkBlue40,
-    surfaceContainerHighest = KDarkBlue50,
+    surfaceDim = DarkBlue10,
+    surfaceBright = DarkBlue40,
+    surfaceContainerLowest = DarkBlue10,
+    surfaceContainerLow = DarkBlue20,
+    surfaceContainer = DarkBlue30,
+    surfaceContainerHigh = DarkBlue40,
+    surfaceContainerHighest = DarkBlue50,
 )
