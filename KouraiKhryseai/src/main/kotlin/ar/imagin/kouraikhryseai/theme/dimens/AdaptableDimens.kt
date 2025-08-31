@@ -23,47 +23,30 @@ import androidx.compose.ui.unit.dp
  * __.*/
 data class AdaptableDimens(val delta: Float = 1f) : KDimensions(
     /**.___
-     * Spacing system following 8dp grid
-     * Common use cases:
-     *  - margins - paddings - dividers
-     * Ideal for distances
-     * __.*/
-    spacing = Spacing(
-        spacing0 = 0.dp,
-        spacing1 = (1 * delta).dp,
-        spacing2 = (2 * delta).dp,
-        spacing3 = (4 * delta).dp,
-        spacing4 = (8 * delta).dp,
-        spacing5 = (16 * delta).dp,
-        spacing6 = (24 * delta).dp,
-        spacing7 = (32 * delta).dp,
-        spacing8 = (48 * delta).dp,
-        spacing9 = (64 * delta).dp
-    ),
-    /**.___
      * For general use, this correspond to natural sizes according to the Fibonacci sequence
      * Common use cases:
+     *  - margins - paddings - dividers
      *  - Images - Icons - Avatars
      *  - Composables - Views
-     * Ideal for any component with a fixed size
+     * Ideal for any component with a fixed size or spacing
      *  __.*/
-    componentSize = ComponentSizes(
-        none = 0.dp,
-        tiny = (1 * delta).dp,
-        xxxSmall = (2 * delta).dp,
-        xxSmall = (3 * delta).dp,
-        xSmall = (5 * delta).dp,
-        small = (8 * delta).dp,
-        medium = (13 * delta).dp,
-        large = (21 * delta).dp,
-        xLarge = (34 * delta).dp,
-        xxLarge = (55 * delta).dp,
-        xxxLarge = (89 * delta).dp,
-        huge = (144 * delta).dp,
-        xHuge = (233 * delta).dp,
-        xxHuge = (377 * delta).dp,
-        xxxHuge = (610 * delta).dp,
-        colossal = (987 * delta).dp
+    size = Sizes(
+        size0 = 0.dp,
+        size1 = (1 * delta).dp,
+        size2 = (2 * delta).dp,
+        size3 = (3 * delta).dp,
+        size4 = (5 * delta).dp,
+        size5 = (8 * delta).dp,
+        size6 = (13 * delta).dp,
+        size7 = (21 * delta).dp,
+        size8 = (34 * delta).dp,
+        size9 = (55 * delta).dp,
+        size10 = (89 * delta).dp,
+        size11 = (144 * delta).dp,
+        size12 = (233 * delta).dp,
+        size13 = (377 * delta).dp,
+        size14 = (610 * delta).dp,
+        size15 = (987 * delta).dp
     ),
     /**.___ Elevation tokens for consistent shadows, following Material Design __.*/
     elevation = Elevation(
@@ -75,10 +58,11 @@ data class AdaptableDimens(val delta: Float = 1f) : KDimensions(
     /**.___ Radius tokens for consistent corners __.*/
     radius = Radius(
         radius0 = 0.dp,
-        radius1 = (4 * delta).dp,
-        radius2 = (8 * delta).dp,
-        radius3 = (12 * delta).dp,
-        radius4 = (16 * delta).dp
+        radius1 = (2 * delta).dp,
+        radius2 = (4 * delta).dp,
+        radius3 = (8 * delta).dp,
+        radius4 = (12 * delta).dp,
+        radius5 = (16 * delta).dp
     ),
     /**.___ Line tokens for strokes and borders __.*/
     border = Borders(

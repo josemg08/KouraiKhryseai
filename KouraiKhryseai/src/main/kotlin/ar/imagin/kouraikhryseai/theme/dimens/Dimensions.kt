@@ -26,28 +26,29 @@ data class Spacing(
 /**.___
  * For general use, this correspond to natural sizes according to the Fibonacci sequence
  * Common use cases:
+ *  - margins - paddings - dividers
  *  - Images - Icons - Avatars
  *  - Composables - Views
- * Ideal for any component with a fixed size
+ * Ideal for any component with a fixed size or spacing
  *  __.*/
 @Immutable
-data class ComponentSizes(
-    val none: Dp,
-    val tiny: Dp,
-    val xxxSmall: Dp,
-    val xxSmall: Dp,
-    val xSmall: Dp,
-    val small: Dp,
-    val medium: Dp,
-    val large: Dp,
-    val xLarge: Dp,
-    val xxLarge: Dp,
-    val xxxLarge: Dp,
-    val huge: Dp,
-    val xHuge: Dp,
-    val xxHuge: Dp,
-    val xxxHuge: Dp,
-    val colossal: Dp
+data class Sizes(
+    val size0: Dp,
+    val size1: Dp,
+    val size2: Dp,
+    val size3: Dp,
+    val size4: Dp,
+    val size5: Dp,
+    val size6: Dp,
+    val size7: Dp,
+    val size8: Dp,
+    val size9: Dp,
+    val size10: Dp,
+    val size11: Dp,
+    val size12: Dp,
+    val size13: Dp,
+    val size14: Dp,
+    val size15: Dp
 )
 
 /**.___ Elevation tokens for consistent shadows, following Material Design __.*/
@@ -67,6 +68,7 @@ data class Radius(
     val radius2: Dp,
     val radius3: Dp,
     val radius4: Dp,
+    val radius5: Dp
 )
 
 /**.___ Line tokens for strokes and borders __.*/
@@ -74,7 +76,7 @@ data class Radius(
 data class Borders(
     val border1: Dp,
     val border2: Dp,
-    val border3: Dp,
+    val border3: Dp
 )
 
 /**.___
