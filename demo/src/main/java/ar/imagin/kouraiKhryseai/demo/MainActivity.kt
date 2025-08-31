@@ -78,14 +78,14 @@ private fun MainScreen() {
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(paddingValues)
-                    .padding(horizontal = KTheme.dimensions.spacing.spacing5),
-                verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.spacing.spacing5)
+                    .padding(horizontal = KTheme.dimensions.size.size6),
+                verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.size.size6)
             ) {
                 item {
                     // Header section
                     Column(
-                        modifier = Modifier.padding(vertical = KTheme.dimensions.spacing.spacing6),
-                        verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.spacing.spacing4)
+                        modifier = Modifier.padding(vertical = KTheme.dimensions.size.size7),
+                        verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.size.size5)
                     ) {
                         Text(
                             text = "Kourai Khryseai",
@@ -111,7 +111,7 @@ private fun MainScreen() {
 
                 item {
                     // Bottom spacing for navigation bar
-                    Box(modifier = Modifier.padding(bottom = KTheme.dimensions.spacing.spacing5))
+                    Box(modifier = Modifier.padding(bottom = KTheme.dimensions.size.size6))
                 }
             }
         }
@@ -138,8 +138,8 @@ private fun TextCard(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(KTheme.dimensions.spacing.spacing6),
-            verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.spacing.spacing5)
+                .padding(KTheme.dimensions.size.size7),
+            verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.size.size6)
         ) {
             // Category badge
             Text(
@@ -152,8 +152,8 @@ private fun TextCard(
                         RoundedCornerShape(KTheme.dimensions.radius.radius2)
                     )
                     .padding(
-                        horizontal = KTheme.dimensions.spacing.spacing4,
-                        vertical = KTheme.dimensions.spacing.spacing3)
+                        horizontal = KTheme.dimensions.size.size5,
+                        vertical = KTheme.dimensions.size.size3)
             )
 
             // Title
