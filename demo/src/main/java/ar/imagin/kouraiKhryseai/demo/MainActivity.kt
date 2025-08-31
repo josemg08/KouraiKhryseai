@@ -42,7 +42,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import ar.imagin.kouraikhryseai.theme.KTheme
-import ar.imagin.kouraikhryseai.theme.colors.extendedColors
+import ar.imagin.kouraikhryseai.theme.KTokens
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,7 +64,7 @@ private fun MainScreen() {
             modifier = Modifier
                 .fillMaxSize()
                 .windowInsetsPadding(WindowInsets.statusBars),
-            containerColor = MaterialTheme.colorScheme.background,
+            containerColor = KTokens.materialColors.background,
             contentWindowInsets = WindowInsets(0),
             bottomBar = {
                 BottomNavigationBar(
@@ -78,14 +78,14 @@ private fun MainScreen() {
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(paddingValues)
-                    .padding(horizontal = KTheme.dimensions.size.size6),
-                verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.size.size6)
+                    .padding(horizontal = KTokens.dimensions.size.size6),
+                verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.size.size6)
             ) {
                 item {
                     // Header section
                     Column(
-                        modifier = Modifier.padding(vertical = KTheme.dimensions.size.size7),
-                        verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.size.size5)
+                        modifier = Modifier.padding(vertical = KTokens.dimensions.size.size7),
+                        verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.size.size5)
                     ) {
                         Text(
                             text = "Kourai Khryseai",
@@ -96,7 +96,7 @@ private fun MainScreen() {
                         Text(
                             text = "Golden Hour Collection",
                             style = MaterialTheme.typography.titleMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                            color = KTokens.materialColors.onSurfaceVariant
                         )
                     }
                 }
@@ -111,7 +111,7 @@ private fun MainScreen() {
 
                 item {
                     // Bottom spacing for navigation bar
-                    Box(modifier = Modifier.padding(bottom = KTheme.dimensions.size.size6))
+                    Box(modifier = Modifier.padding(bottom = KTokens.dimensions.size.size6))
                 }
             }
         }
@@ -127,33 +127,33 @@ private fun TextCard(
     Card(
         modifier = Modifier
             .fillMaxWidth(),
-        shape = KTheme.shapes.card,
+        shape = KTokens.shapes.card,
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceContainer
+            containerColor = KTokens.materialColors.surfaceContainer
         ),
         elevation = CardDefaults.cardElevation(
-            defaultElevation = KTheme.dimensions.elevation.level1
+            defaultElevation = KTokens.dimensions.elevation.level1
         )
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(KTheme.dimensions.size.size7),
-            verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.size.size6)
+                .padding(KTokens.dimensions.size.size7),
+            verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.size.size6)
         ) {
             // Category badge
             Text(
                 text = category.uppercase(),
                 style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSecondary,
+                color = KTokens.materialColors.onSecondary,
                 modifier = Modifier
                     .background(
-                        MaterialTheme.colorScheme.secondary,
-                        KTheme.shapes.chip
+                        KTokens.materialColors.secondary,
+                        KTokens.shapes.chip
                     )
                     .padding(
-                        horizontal = KTheme.dimensions.size.size5,
-                        vertical = KTheme.dimensions.size.size3
+                        horizontal = KTokens.dimensions.size.size5,
+                        vertical = KTokens.dimensions.size.size3
                     )
             )
 
@@ -161,7 +161,7 @@ private fun TextCard(
             Text(
                 text = title,
                 style = MaterialTheme.typography.titleLarge,
-                color = MaterialTheme.colorScheme.onSurface,
+                color = KTokens.materialColors.onSurface,
                 fontWeight = FontWeight.Medium
             )
 
@@ -169,7 +169,7 @@ private fun TextCard(
             Text(
                 text = content,
                 style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                color = KTokens.materialColors.onSurfaceVariant,
                 lineHeight = MaterialTheme.typography.bodyMedium.lineHeight
             )
         }
@@ -190,8 +190,8 @@ private fun BottomNavigationBar(
     )
 
     NavigationBar(
-        containerColor = MaterialTheme.colorScheme.surfaceContainer,
-        contentColor = MaterialTheme.colorScheme.onSurface,
+        containerColor = KTokens.materialColors.surfaceContainer,
+        contentColor = KTokens.materialColors.onSurface,
         modifier = Modifier.windowInsetsPadding(WindowInsets.navigationBars)
     ) {
         items.forEachIndexed { index, item ->
@@ -272,64 +272,5 @@ private fun createSampleTexts(): List<TextItem> = listOf(
 @Preview
 @Composable
 private fun MainScreenPreview() {
-    KTheme(dynamicColor = false) {
-        var selectedTab by remember { mutableIntStateOf(0) }
-        val listState = rememberLazyListState()
-
-        Scaffold(
-            modifier = Modifier
-                .fillMaxSize()
-                .windowInsetsPadding(WindowInsets.statusBars),
-            containerColor = MaterialTheme.colorScheme.background,
-            contentWindowInsets = WindowInsets(0),
-            bottomBar = {
-                BottomNavigationBar(
-                    selectedTab = selectedTab,
-                    onTabSelected = { selectedTab = it }
-                )
-            }
-        ) { paddingValues ->
-            LazyColumn(
-                state = listState,
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(paddingValues)
-                    .padding(horizontal = KTheme.dimensions.size.size6),
-                verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.size.size6)
-            ) {
-                item {
-                    // Header section
-                    Column(
-                        modifier = Modifier.padding(vertical = KTheme.dimensions.size.size7),
-                        verticalArrangement = Arrangement.spacedBy(KTheme.dimensions.size.size5)
-                    ) {
-                        Text(
-                            text = "Kourai Khryseai",
-                            style = MaterialTheme.typography.displaySmall,
-                            color = MaterialTheme.colorScheme.onBackground,
-                            fontWeight = FontWeight.Bold
-                        )
-                        Text(
-                            text = "Golden Hour Collection",
-                            style = MaterialTheme.typography.titleMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                }
-
-                items(createSampleTexts()) { textItem ->
-                    TextCard(
-                        title = textItem.title,
-                        content = textItem.content,
-                        category = textItem.category
-                    )
-                }
-
-                item {
-                    // Bottom spacing for navigation bar
-                    Box(modifier = Modifier.padding(bottom = KTheme.dimensions.size.size6))
-                }
-            }
-        }
-    }
+    MainScreen()
 }

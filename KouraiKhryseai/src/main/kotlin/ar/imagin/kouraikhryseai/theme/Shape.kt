@@ -19,20 +19,20 @@ data class ExtendedShapes(
 @Composable
 fun getShapes() = ExtendedShapes(
     material = Shapes(
-        extraSmall = RoundedCornerShape(KTheme.dimensions.radius.radius2),
-        small = RoundedCornerShape(KTheme.dimensions.radius.radius3),
-        medium = RoundedCornerShape(KTheme.dimensions.radius.radius4),
-        large = RoundedCornerShape(KTheme.dimensions.radius.radius5),
-        extraLarge = RoundedCornerShape(KTheme.dimensions.size.size8)
+        extraSmall = RoundedCornerShape(KTokens.dimensions.radius.radius2),
+        small = RoundedCornerShape(KTokens.dimensions.radius.radius3),
+        medium = RoundedCornerShape(KTokens.dimensions.radius.radius4),
+        large = RoundedCornerShape(KTokens.dimensions.radius.radius5),
+        extraLarge = RoundedCornerShape(KTokens.dimensions.size.size8)
     ),
-    button = RoundedCornerShape(KTheme.dimensions.radius.radius4),
-    card = RoundedCornerShape(KTheme.dimensions.radius.radius5),
+    button = RoundedCornerShape(KTokens.dimensions.radius.radius4),
+    card = RoundedCornerShape(KTokens.dimensions.radius.radius5),
     bottomSheet = RoundedCornerShape(
-        topStart = KTheme.dimensions.size.size8,
-        topEnd = KTheme.dimensions.size.size8
+        topStart = KTokens.dimensions.size.size8,
+        topEnd = KTokens.dimensions.size.size8
     ),
-    dialog = RoundedCornerShape(KTheme.dimensions.size.size7),
-    fab = RoundedCornerShape(KTheme.dimensions.radius.radius5),
-    chip = RoundedCornerShape(KTheme.dimensions.radius.radius3),
+    dialog = RoundedCornerShape(KTokens.dimensions.size.size7),
+    fab = RoundedCornerShape(KTokens.dimensions.radius.radius5),
+    chip = RoundedCornerShape(KTokens.dimensions.radius.radius3),
     pill = RoundedCornerShape(50)
 )

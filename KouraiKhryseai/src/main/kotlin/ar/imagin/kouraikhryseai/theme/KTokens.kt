@@ -49,7 +49,7 @@ fun KTheme(
 }
 
 //.___ Convenience accessors for theme tokens __./
-object KTheme {
+object KTokens {
     val dimensions: KDimensions
         @Composable get() {
             val windowInfo = LocalWindowInfo.current
@@ -63,4 +63,6 @@ object KTheme {
         }
 
     val shapes @Composable get() = getShapes()
+
+    val materialColors @Composable get() = MaterialTheme.colorScheme
 }

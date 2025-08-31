@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import ar.imagin.kouraikhryseai.theme.KTheme
+import ar.imagin.kouraikhryseai.theme.KTokens
 
 data class KExtendedColors(
     // Success colors follow Material3 patterns
@@ -73,7 +73,7 @@ val DarkExtendedColors = KExtendedColors(
     onBrandContainer = OceanGreen90,
 )
 
-val KTheme.extendedColors: KExtendedColors
+val KTokens.extendedColors: KExtendedColors
     @Composable
     @ReadOnlyComposable
     get() = LocalExtendedColors.current
