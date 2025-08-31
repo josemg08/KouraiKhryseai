@@ -33,7 +33,7 @@ package ar.imagin.kouraikhryseai.theme.dimens
 .--*/
 object SWOptimizationConstants {
     /**
-     * Delta multiplier for screens smaller than sw360dp.
+     * Delta multiplier for screens smaller than sw320dp.
      * Reduces dimensions to 75% of default size.
      */
     const val SMALL_SCREEN_DELTA = 0.75f
@@ -49,7 +49,7 @@ object SWOptimizationConstants {
      * Used for determining which delta to apply.
      */
     object Breakpoints {
-        const val SMALL_SCREEN = 360
+        const val SMALL_SCREEN = 320
         const val TABLET = 600
         const val LARGE_TABLET = 840
     }
