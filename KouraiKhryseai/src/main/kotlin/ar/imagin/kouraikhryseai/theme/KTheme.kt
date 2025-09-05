@@ -9,10 +9,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
 import ar.imagin.kouraikhryseai.theme.colors.ColorGenerator
-import ar.imagin.kouraikhryseai.theme.colors.Orange10
-import ar.imagin.kouraikhryseai.theme.colors.Orange30
-import ar.imagin.kouraikhryseai.theme.colors.Orange80
-import ar.imagin.kouraikhryseai.theme.colors.Orange90
 import ar.imagin.kouraikhryseai.theme.dimens.AdaptableDimens
 import ar.imagin.kouraikhryseai.theme.dimens.KDimensions
 import ar.imagin.kouraikhryseai.theme.dimens.SWOptimizationConstants
@@ -28,8 +24,8 @@ fun KTheme(
 
     // Generate palettes
     val primaryPalette = ColorGenerator.generateTonalPalette(colors.primary)
-    val secondaryPalette = ColorGenerator.generateTonalPalette(colors.accent) // accent as secondary
-    val tertiaryPalette = ColorGenerator.generateTonalPalette(colors.secondary) // secondary as tertiary
+    val secondaryPalette = ColorGenerator.generateTonalPalette(colors.secondary)
+    val tertiaryPalette = ColorGenerator.generateTonalPalette(colors.tertiary)
 
     val semanticColors = if (darkTheme) colors.darkColors else colors.lightColors
 

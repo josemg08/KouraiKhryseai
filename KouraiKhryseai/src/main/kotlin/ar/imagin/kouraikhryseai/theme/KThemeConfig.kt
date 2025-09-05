@@ -34,7 +34,7 @@ import ar.imagin.kouraikhryseai.theme.colors.Transparent
 data class KColorConfig(
     val primary: Color = Color(0xFF20373b),
     val secondary: Color = Color(0xFFff8800),
-    val accent: Color = Color(0xFF161620),
+    val tertiary: Color = Color(0xFF161620),
     val lightColors: SemanticColorScheme = SemanticColorScheme(
         background = Neutral99,
         onBackground = Neutral10,

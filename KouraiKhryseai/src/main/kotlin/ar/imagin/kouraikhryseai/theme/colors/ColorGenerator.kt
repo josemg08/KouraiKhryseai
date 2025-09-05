@@ -6,21 +6,21 @@ import androidx.core.graphics.ColorUtils
 
 object ColorGenerator {
     fun generateTonalPalette(baseColor: Color): Map<Int, Color> {
-        val hsl = FloatArray(3)
-        ColorUtils.colorToHSL(baseColor.toArgb(), hsl)
+        val hSLValues = FloatArray(3)
+        ColorUtils.colorToHSL(baseColor.toArgb(), hSLValues)
 
         return mapOf(
-            10 to createHslColor(hsl[0], hsl[1], 0.10f),
-            20 to createHslColor(hsl[0], hsl[1], 0.20f),
-            30 to createHslColor(hsl[0], hsl[1], 0.30f),
-            40 to createHslColor(hsl[0], hsl[1], 0.40f),
+            10 to createHslColor(hSLValues[0], hSLValues[1], 0.05f),
+            20 to createHslColor(hSLValues[0], hSLValues[1], 0.10f),
+            30 to createHslColor(hSLValues[0], hSLValues[1], 0.15f),
+            40 to createHslColor(hSLValues[0], hSLValues[1], 0.20f),
             50 to baseColor,
-            60 to createHslColor(hsl[0], hsl[1], 0.60f),
-            70 to createHslColor(hsl[0], hsl[1], 0.70f),
-            80 to createHslColor(hsl[0], hsl[1], 0.80f),
-            90 to createHslColor(hsl[0], hsl[1], 0.90f),
-            95 to createHslColor(hsl[0], hsl[1], 0.95f),
-            99 to createHslColor(hsl[0], hsl[1], 0.99f)
+            60 to createHslColor(hSLValues[0], hSLValues[1], 0.30f),
+            70 to createHslColor(hSLValues[0], hSLValues[1], 0.35f),
+            80 to createHslColor(hSLValues[0], hSLValues[1], 0.40f),
+            90 to createHslColor(hSLValues[0], hSLValues[1], 0.45f),
+            95 to createHslColor(hSLValues[0], hSLValues[1], 0.50f),
+            99 to createHslColor(hSLValues[0], hSLValues[1], 0.55f)
         )
     }
 
