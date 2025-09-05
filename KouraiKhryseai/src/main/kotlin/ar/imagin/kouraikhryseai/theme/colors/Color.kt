@@ -7,7 +7,7 @@ val KDarkBlue = Color(0xFF161620)
 val KOrange = Color(0xFFff8800)
 val KOceanGreen = Color(0xFF20373b)
 
-//.___ Extended Semantic Colors __./
+//.___ Semantic Colors __./
 val OceanGreen10 = Color(0xFF001416)
 val OceanGreen30 = Color(0xFF003B40)
 val OceanGreen40 = Color(0xFF1A4F54)

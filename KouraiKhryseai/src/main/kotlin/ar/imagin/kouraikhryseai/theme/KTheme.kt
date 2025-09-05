@@ -1,17 +1,22 @@
 package ar.imagin.kouraikhryseai.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.ReadOnlyComposable
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
-import ar.imagin.kouraikhryseai.theme.colors.ColorGenerator
+import ar.imagin.kouraikhryseai.theme.colors.ExtendedColorScheme
 import ar.imagin.kouraikhryseai.theme.dimens.AdaptableDimens
 import ar.imagin.kouraikhryseai.theme.dimens.KDimensions
 import ar.imagin.kouraikhryseai.theme.dimens.SWOptimizationConstants
+
+val LocalExtendedColors = staticCompositionLocalOf<ExtendedColorScheme> {
+    error("No ExtendedColors provided")
+}
 
 @Composable
 fun KTheme(
@@ -22,21 +27,30 @@ fun KTheme(
     val config = KThemeConfigHolder.config
     val colors = config.colors
 
-    val colorScheme = if (darkTheme && colors.darkColorsScheme != null) {
-        colors.darkColorsScheme!!
+    lateinit var colorScheme: ColorScheme
+    lateinit var kColorScheme: ExtendedColorScheme
+
+    if (darkTheme && colors.darkColorsScheme != null) {
+        colorScheme = colors.darkColorsScheme!!
+        kColorScheme = colors.darkExtendedColorScheme!!
     } else {
-        colors.lightColorsScheme!!
+        colorScheme = colors.lightColorsScheme!!
+        kColorScheme = colors.lightExtendedColorScheme!!
     }
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = config.typography,
-        shapes = getShapes().material,
-        content = content
-    )
+    CompositionLocalProvider(
+        LocalExtendedColors provides kColorScheme
+    ) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = config.typography,
+            shapes = getShapes().material,
+            content = content
+        )
+    }
 }
 
-//.___ Convenience accessors for theme tokens __./
+/**.___ Convenience accessors for theme tokens __.*/
 object KTokens {
     val dimensions: KDimensions
         @Composable get() {
@@ -54,3 +68,8 @@ object KTokens {
 
     val materialColors @Composable get() = MaterialTheme.colorScheme
 }
+
+val KTokens.extendedColors: ExtendedColorScheme
+    @Composable
+    @ReadOnlyComposable
+    get() = LocalExtendedColors.current

@@ -15,9 +15,9 @@ KouraiKhryseai (from Ancient Greek: κοῦραι χρύσειαι, "golden maid
 ## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Features
 
 * **Material Design 3 Compatible** - Seamless integration with the latest Material Design guidelines
-* **Performance Optimized** - Lightweight implementation with minimal overhead
 * **Golden Ratio** - Dimension follow Fibonacci sequence to achieve natural symmetry
-* **Kotlin-First** - Written in Kotlin with modern Android development practices
+* **Performance Optimized** - Lightweight implementation with minimal overhead
+* **Ease of use** - Highly customizable with minimal tinkering
 
 ## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Usage
 
