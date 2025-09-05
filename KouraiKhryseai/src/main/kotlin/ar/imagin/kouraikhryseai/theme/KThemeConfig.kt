@@ -10,59 +10,33 @@ import ar.imagin.kouraikhryseai.theme.colors.generateDefaultDarkColorScheme
 import ar.imagin.kouraikhryseai.theme.colors.generateDefaultLightColorScheme
 
 data class KColorConfig(
-    val lightColorsScheme: ColorScheme? = null,
-    val darkColorsScheme: ColorScheme? = null,
-    val primary: Color? = null,
-    val secondary: Color? = null,
-    val tertiary: Color? = null
+    var lightColorsScheme: ColorScheme? = null,
+    var darkColorsScheme: ColorScheme? = null,
+    var primary: Color? = null,
+    var secondary: Color? = null,
+    var tertiary: Color? = null
 ) {
-    constructor(lightColorsScheme: ColorScheme) : this(
-        lightColorsScheme = lightColorsScheme,
-        darkColorsScheme = null,
-        primary = null,
-        secondary = null,
-        tertiary = null
-    )
+    init {
+        primary = primary ?: KDarkBlue
+        secondary = secondary ?: KOrange
+        tertiary = tertiary ?: KOceanGreen
 
-    constructor(lightColorsScheme: ColorScheme, darkColorsScheme: ColorScheme) : this(
-        lightColorsScheme = lightColorsScheme,
-        darkColorsScheme = darkColorsScheme,
-        primary = null,
-        secondary = null,
-        tertiary = null
-    )
+        if (darkColorsScheme == null && lightColorsScheme == null) {
+            darkColorsScheme = generateDefaultDarkColorScheme(
+                primary = primary!!,
+                secondary = secondary!!,
+                tertiary = tertiary!!
+            )
+        }
 
-    constructor(primary: Color, secondary: Color, tertiary: Color) : this(
-        lightColorsScheme = generateDefaultLightColorScheme(
-            primary = primary,
-            secondary = secondary,
-            tertiary = tertiary
-        ),
-        darkColorsScheme = generateDefaultDarkColorScheme(
-            primary = primary,
-            secondary = secondary,
-            tertiary = tertiary
-        ),
-        primary = primary,
-        secondary = secondary,
-        tertiary = tertiary
-    )
-
-    constructor() : this(
-        lightColorsScheme = generateDefaultLightColorScheme(
-            primary = KDarkBlue,
-            secondary = KOrange,
-            tertiary = KOceanGreen
-        ),
-        darkColorsScheme = generateDefaultDarkColorScheme(
-            primary = KDarkBlue,
-            secondary = KOrange,
-            tertiary = KOceanGreen
-        ),
-        primary = KDarkBlue,
-        secondary = KOrange,
-        tertiary = KOceanGreen
-    )
+        if (lightColorsScheme == null) {
+            lightColorsScheme = generateDefaultLightColorScheme(
+                primary = primary!!,
+                secondary = secondary!!,
+                tertiary = tertiary!!
+            )
+        }
+    }
 }
 
 data class KThemeConfig(

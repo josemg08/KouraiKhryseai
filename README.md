@@ -10,15 +10,68 @@
 
 ## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Overview
 
-KouraiKhryseai (from Ancient Greek: κοῦραι χρύσειαι, "golden maidens") is an elegant Android design system library inspired by Hephaestus's legendary automata. Just as these divine constructs assisted the master craftsman god in his forge, this library aims to empower Android developers in crafting beautiful and robust applications.
+KouraiKhryseai (from Ancient Greek: κοῦραι χρύσειαι, "golden maidens") is an elegant Android design system library inspired by Hephaestus's legendary automata. Just as these divine constructs assisted the god craftsman in his forge, this library aims to empower Android developers in crafting beautiful and accessible applications.
 
 ## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Features
 
-* **Atomic Design Principles** - Built following Brad Frost's methodology, organizing components from atoms to organisms
-* **Modular Architecture** - Highly composable components that can be used independently
 * **Material Design 3 Compatible** - Seamless integration with the latest Material Design guidelines
 * **Performance Optimized** - Lightweight implementation with minimal overhead
+* **Golden Ratio** - Dimension follow Fibonacci sequence to achieve natural symmetry
 * **Kotlin-First** - Written in Kotlin with modern Android development practices
+
+## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Usage
+
+### Theme Configuration
+
+KouraiKhryseai provides a flexible theming system through `KThemeConfig` and `KTheme`. Initialize the configuration in your `Application` class and wrap your UI with the theme composable.
+
+#### Basic Setup
+
+```kotlin
+class MyApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        KThemeConfigHolder.init(
+            config = KThemeConfig()
+        )
+    }
+}
+```
+
+#### Providing your own basic colors
+
+```kotlin
+KThemeConfigHolder.init(
+    config = KThemeConfig(
+        colors = KColorConfig(
+            primary = Color(0xFF6750A4),
+            secondary = Color(0xFF625B71),
+            tertiary = Color(0xFF7D5260)
+        )
+    )
+)
+```
+
+#### Providing complete Material 3 ColorScheme
+
+```kotlin
+KThemeConfigHolder.init(
+    config = KThemeConfig(
+        colors = KColorConfig(
+            lightColorsScheme = ColorScheme(
+                primary = Color(0xFF6750A4),
+                onPrimary = Color(0xFFFFFFFF),
+                // ... other colors
+            ),
+            darkColorsScheme = ColorScheme(
+                primary = Color(0xFFD0BCFF),
+                onPrimary = Color(0xFF381E72),
+                // ... other colors
+            )
+        )
+    )
+)
+```
 
 ## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Mythological Inspiration
 

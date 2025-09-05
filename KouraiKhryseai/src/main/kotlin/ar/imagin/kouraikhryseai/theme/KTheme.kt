@@ -23,7 +23,7 @@ fun KTheme(
     val colors = config.colors
 
     val colorScheme = if (darkTheme && colors.darkColorsScheme != null) {
-        colors.darkColorsScheme
+        colors.darkColorsScheme!!
     } else {
         colors.lightColorsScheme!!
     }
