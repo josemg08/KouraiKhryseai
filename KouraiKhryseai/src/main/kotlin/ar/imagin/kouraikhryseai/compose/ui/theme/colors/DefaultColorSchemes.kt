@@ -1,4 +1,4 @@
-package ar.imagin.kouraikhryseai.theme.colors
+package ar.imagin.kouraikhryseai.compose.ui.theme.colors
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.ui.graphics.Color

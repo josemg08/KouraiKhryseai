@@ -1,16 +1,16 @@
-package ar.imagin.kouraikhryseai.theme
+package ar.imagin.kouraikhryseai.compose.ui.theme
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.Typography
 import androidx.compose.ui.graphics.Color
-import ar.imagin.kouraikhryseai.theme.colors.ExtendedColorScheme
-import ar.imagin.kouraikhryseai.theme.colors.KDarkBlue
-import ar.imagin.kouraikhryseai.theme.colors.KOceanGreen
-import ar.imagin.kouraikhryseai.theme.colors.KOrange
-import ar.imagin.kouraikhryseai.theme.colors.generateDefaultDarkColorScheme
-import ar.imagin.kouraikhryseai.theme.colors.generateDefaultLightColorScheme
-import ar.imagin.kouraikhryseai.theme.colors.getDefaultDarkExtendedColors
-import ar.imagin.kouraikhryseai.theme.colors.getDefaultLightExtendedColors
+import ar.imagin.kouraikhryseai.compose.ui.theme.colors.ExtendedColorScheme
+import ar.imagin.kouraikhryseai.compose.ui.theme.colors.KDarkBlue
+import ar.imagin.kouraikhryseai.compose.ui.theme.colors.KOceanGreen
+import ar.imagin.kouraikhryseai.compose.ui.theme.colors.KOrange
+import ar.imagin.kouraikhryseai.compose.ui.theme.colors.generateDefaultDarkColorScheme
+import ar.imagin.kouraikhryseai.compose.ui.theme.colors.generateDefaultLightColorScheme
+import ar.imagin.kouraikhryseai.compose.ui.theme.colors.getDefaultDarkExtendedColors
+import ar.imagin.kouraikhryseai.compose.ui.theme.colors.getDefaultLightExtendedColors
 
 data class KColorConfig(
     var primary: Color? = null,
