@@ -22,99 +22,10 @@ fun KTheme(
     val config = KThemeConfigHolder.config
     val colors = config.colors
 
-    // Generate palettes
-    val primaryPalette = ColorGenerator.generateTonalPalette(colors.primary)
-    val secondaryPalette = ColorGenerator.generateTonalPalette(colors.secondary)
-    val tertiaryPalette = ColorGenerator.generateTonalPalette(colors.tertiary)
-
-    val semanticColors = if (darkTheme) colors.darkColors else colors.lightColors
-
-    val colorScheme = if (darkTheme) {
-        darkColorScheme(
-            primary = primaryPalette[80]!!,
-            onPrimary = primaryPalette[10]!!,
-            primaryContainer = secondaryPalette[80]!!,
-            onPrimaryContainer = Color.Black,
-
-            secondary = secondaryPalette[80]!!,
-            onSecondary = secondaryPalette[10]!!,
-            secondaryContainer = secondaryPalette[30]!!,
-            onSecondaryContainer = secondaryPalette[90]!!,
-
-            tertiary = tertiaryPalette[70]!!,
-            onTertiary = tertiaryPalette[10]!!,
-            tertiaryContainer = tertiaryPalette[20]!!,
-            onTertiaryContainer = tertiaryPalette[95]!!,
-
-            error = semanticColors.error,
-            onError = semanticColors.onError,
-            errorContainer = semanticColors.errorContainer,
-            onErrorContainer = semanticColors.onErrorContainer,
-
-            background = semanticColors.background,
-            onBackground = semanticColors.onBackground,
-            surface = semanticColors.surface,
-            onSurface = semanticColors.onSurface,
-            surfaceVariant = semanticColors.surfaceVariant,
-            onSurfaceVariant = semanticColors.onSurfaceVariant,
-            surfaceTint = semanticColors.surfaceTint,
-            inverseSurface = semanticColors.inverseSurface,
-            inverseOnSurface = semanticColors.inverseOnSurface,
-            inversePrimary = primaryPalette[40]!!,
-            outline = semanticColors.outline,
-            outlineVariant = semanticColors.outlineVariant,
-            scrim = semanticColors.scrim,
-            surfaceBright = semanticColors.surfaceBright,
-            surfaceDim = semanticColors.surfaceDim,
-            surfaceContainerLowest = semanticColors.surfaceContainerLowest,
-            surfaceContainerLow = semanticColors.surfaceContainerLow,
-            surfaceContainer = semanticColors.surfaceContainer,
-            surfaceContainerHigh = semanticColors.surfaceContainerHigh,
-            surfaceContainerHighest = semanticColors.surfaceContainerHighest
-        )
+    val colorScheme = if (darkTheme && colors.darkColorsScheme != null) {
+        colors.darkColorsScheme
     } else {
-        lightColorScheme(
-            primary = primaryPalette[40]!!,
-            onPrimary = Color.White,
-            primaryContainer = primaryPalette[90]!!,
-            onPrimaryContainer = primaryPalette[10]!!,
-
-            secondary = secondaryPalette[40]!!,
-            onSecondary = Color.White,
-            secondaryContainer = secondaryPalette[90]!!,
-            onSecondaryContainer = secondaryPalette[10]!!,
-
-            tertiary = tertiaryPalette[60]!!,
-            onTertiary = Color.White,
-            tertiaryContainer = tertiaryPalette[95]!!,
-            onTertiaryContainer = tertiaryPalette[10]!!,
-
-            error = semanticColors.error,
-            onError = semanticColors.onError,
-            errorContainer = semanticColors.errorContainer,
-            onErrorContainer = semanticColors.onErrorContainer,
-
-            background = semanticColors.background,
-            onBackground = semanticColors.onBackground,
-            surface = semanticColors.surface,
-            onSurface = semanticColors.onSurface,
-            surfaceVariant = semanticColors.surfaceVariant,
-            onSurfaceVariant = semanticColors.onSurfaceVariant,
-            surfaceTint = semanticColors.surfaceTint,
-            inverseSurface = semanticColors.inverseSurface,
-            inverseOnSurface = semanticColors.inverseOnSurface,
-            inversePrimary = primaryPalette[80]!!,
-            outline = semanticColors.outline,
-            outlineVariant = semanticColors.outlineVariant,
-            scrim = semanticColors.scrim,
-            surfaceBright = semanticColors.surfaceBright,
-            surfaceDim = semanticColors.surfaceDim,
-            surfaceContainerLowest = semanticColors.surfaceContainerLowest,
-            surfaceContainerLow = semanticColors.surfaceContainerLow,
-            surfaceContainer = semanticColors.surfaceContainer,
-            surfaceContainerHigh = semanticColors.surfaceContainerHigh,
-            surfaceContainerHighest = semanticColors.surfaceContainerHighest
-        )
+        colors.lightColorsScheme!!
     }
 
     MaterialTheme(

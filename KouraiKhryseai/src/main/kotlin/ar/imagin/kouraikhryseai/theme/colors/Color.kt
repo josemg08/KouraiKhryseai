@@ -2,47 +2,30 @@ package ar.imagin.kouraikhryseai.theme.colors
 
 import androidx.compose.ui.graphics.Color
 
-//.___ Brand Colors __./
-val KOceanGreen = Color(0xFF20373b)
+//.___ KK Brand Colors __./
 val KDarkBlue = Color(0xFF161620)
 val KOrange = Color(0xFFff8800)
+val KOceanGreen = Color(0xFF20373b)
 
 //.___ Extended Semantic Colors __./
 val OceanGreen10 = Color(0xFF001416)
-val OceanGreen20 = Color(0xFF00272A)
 val OceanGreen30 = Color(0xFF003B40)
 val OceanGreen40 = Color(0xFF1A4F54)
-val OceanGreen50 = Color(0xFF20373b) // Base
-val OceanGreen60 = Color(0xFF4F7B80)
-val OceanGreen70 = Color(0xFF6B959A)
 val OceanGreen80 = Color(0xFF88B0B5)
 val OceanGreen90 = Color(0xFFA6CCD1)
-val OceanGreen95 = Color(0xFFD3E5E8)
-val OceanGreen99 = Color(0xFFF7FEFF)
 
 val Orange10 = Color(0xFF2B1600)
-val Orange20 = Color(0xFF442700)
 val Orange30 = Color(0xFF5F3900)
 val Orange40 = Color(0xFF7C4D00)
-val Orange50 = Color(0xFF996200)
-val Orange60 = Color(0xFFB57700)
-val Orange70 = Color(0xFFD28D00)
-val Orange80 = Color(0xFFFF8800) // Base
+val Orange80 = Color(0xFFFF8800)
 val Orange90 = Color(0xFFFFB74D)
-val Orange95 = Color(0xFFFFE0B2)
-val Orange99 = Color(0xFFFFF8F0)
 
 val DarkBlue10 = Color(0xFF0A0A10)
-val DarkBlue20 = Color(0xFF161620) // Base
+val DarkBlue20 = Color(0xFF161620)
 val DarkBlue30 = Color(0xFF252535)
 val DarkBlue40 = Color(0xFF3A3A4A)
 val DarkBlue50 = Color(0xFF50505F)
-val DarkBlue60 = Color(0xFF696979)
-val DarkBlue70 = Color(0xFF838393)
-val DarkBlue80 = Color(0xFF9E9EAE)
 val DarkBlue90 = Color(0xFFBCBCCC)
-val DarkBlue95 = Color(0xFFDDDDE6)
-val DarkBlue99 = Color(0xFFFEFEFF)
 
 //.___ Neutral Colors __./
 val Neutral10 = Color(0xFF191C1D)
@@ -61,8 +44,6 @@ val NeutralVariant90 = Color(0xFFDAE5E2)
 val Error40 = Color(0xFFBA1A1A)
 val Error80 = Color(0xFFFFB4AB)
 val Error90 = Color(0xFFFFDAD6)
-
-val OnError = Color(0xFFFFFFFF)
 val OnErrorContainer = Color(0xFF410002)
 val ErrorContainer = Color(0xFFFFDAD6)
 
