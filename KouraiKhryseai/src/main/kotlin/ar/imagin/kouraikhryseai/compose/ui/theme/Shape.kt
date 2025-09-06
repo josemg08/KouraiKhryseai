@@ -1,4 +1,4 @@
-package ar.imagin.kouraikhryseai.theme
+package ar.imagin.kouraikhryseai.compose.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes

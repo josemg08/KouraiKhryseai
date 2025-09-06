@@ -41,8 +41,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import ar.imagin.kouraikhryseai.theme.KTheme
-import ar.imagin.kouraikhryseai.theme.KTokens
+import ar.imagin.kouraikhryseai.compose.ui.theme.KTheme
+import ar.imagin.kouraikhryseai.compose.ui.theme.KTokens
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

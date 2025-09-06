@@ -1,4 +1,4 @@
-package ar.imagin.kouraikhryseai.theme
+package ar.imagin.kouraikhryseai.compose.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.ColorScheme
@@ -8,11 +8,12 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.platform.LocalWindowInfo
-import ar.imagin.kouraikhryseai.theme.colors.ExtendedColorScheme
-import ar.imagin.kouraikhryseai.theme.dimens.AdaptableDimens
-import ar.imagin.kouraikhryseai.theme.dimens.KDimensions
-import ar.imagin.kouraikhryseai.theme.dimens.SWOptimizationConstants
+import ar.imagin.kouraikhryseai.compose.ui.theme.colors.ExtendedColorScheme
+import ar.imagin.kouraikhryseai.compose.ui.theme.dimens.AdaptableDimens
+import ar.imagin.kouraikhryseai.compose.ui.theme.dimens.KDimensions
+import ar.imagin.kouraikhryseai.compose.ui.theme.dimens.SWOptimizationConstants
 
 val LocalExtendedColors = staticCompositionLocalOf<ExtendedColorScheme> {
     error("No ExtendedColors provided")
@@ -24,6 +25,13 @@ fun KTheme(
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
+    if (LocalInspectionMode.current) {
+        try {
+            KThemeConfigHolder.config
+        } catch (_: IllegalStateException) {
+            KThemeConfigHolder.init(config = KThemeConfig())
+        }
+    }
     val config = KThemeConfigHolder.config
     val colors = config.colors
 

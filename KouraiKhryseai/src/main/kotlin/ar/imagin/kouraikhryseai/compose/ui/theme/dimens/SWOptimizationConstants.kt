@@ -1,4 +1,4 @@
-package ar.imagin.kouraikhryseai.theme.dimens
+package ar.imagin.kouraikhryseai.compose.ui.theme.dimens
 
 /**.___
     ================================================================================
