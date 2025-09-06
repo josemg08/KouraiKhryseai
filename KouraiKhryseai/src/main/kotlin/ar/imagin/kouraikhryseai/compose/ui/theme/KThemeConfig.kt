@@ -1,8 +1,8 @@
 package ar.imagin.kouraikhryseai.compose.ui.theme
 
 import androidx.compose.material3.ColorScheme
-import androidx.compose.material3.Typography
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
 import ar.imagin.kouraikhryseai.compose.ui.theme.colors.ExtendedColorScheme
 import ar.imagin.kouraikhryseai.compose.ui.theme.colors.KDarkBlue
 import ar.imagin.kouraikhryseai.compose.ui.theme.colors.KOceanGreen
@@ -54,7 +54,7 @@ data class KColorConfig(
 
 data class KThemeConfig(
     val colors: KColorConfig = KColorConfig(),
-    val typography: Typography = Typography()
+    val fontFamily: FontFamily = FontFamily.Default
 )
 
 object KThemeConfigHolder {

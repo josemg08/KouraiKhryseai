@@ -3,6 +3,7 @@ package ar.imagin.kouraikhryseai.compose.ui.theme
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
@@ -51,7 +52,7 @@ fun KTheme(
     ) {
         MaterialTheme(
             colorScheme = colorScheme,
-            typography = config.typography,
+            typography = KTokens.typography,
             shapes = getShapes().material,
             content = content
         )
@@ -60,6 +61,10 @@ fun KTheme(
 
 /**.___ Convenience accessors for theme tokens __.*/
 object KTokens {
+    val shapes @Composable get() = getShapes()
+
+    val materialColors @Composable get() = MaterialTheme.colorScheme
+
     val dimensions: KDimensions
         @Composable get() {
             val windowInfo = LocalWindowInfo.current
@@ -72,9 +77,21 @@ object KTokens {
             )
         }
 
-    val shapes @Composable get() = getShapes()
+    val typography: Typography
+        @Composable get() {
+            val windowInfo = LocalWindowInfo.current
+            val screenWidthDp = with(LocalDensity.current) {
+                windowInfo.containerSize.width.toDp()
+            }.value.toInt()
 
-    val materialColors @Composable get() = MaterialTheme.colorScheme
+            val delta = SWOptimizationConstants.getDeltaForScreenWidth(screenWidthDp)
+            val config = KThemeConfigHolder.config
+
+            return createAdaptableTypography(
+                delta = delta,
+                fontFamily = config.fontFamily
+            )
+        }
 }
 
 val KTokens.extendedColors: ExtendedColorScheme
