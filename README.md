@@ -73,6 +73,22 @@ KThemeConfigHolder.init(
 )
 ```
 
+#### Providing your own font
+this font will be automatically added to the configuration so it uses the correct dimens for scalling acoording to SW.
+
+```kotlin
+val yourFontFamily =
+            ResourcesCompat.getFont(this, R.font.yourFont)?.let {
+                FontFamily(it)
+            } ?: FontFamily.Default
+
+        KThemeConfigHolder.init(
+            config = KThemeConfig(
+                fontFamily = yourFontFamily
+            )
+        )
+```
+
 ## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Mythological Inspiration
 
 In Homer's Iliad, Hephaestus - the god of craftsmanship, fire, and metallurgy - created golden handmaidens endowed with intelligence, speech, and divine knowledge. These remarkable automata served as his assistants in the divine forge, representing the perfect union of artistry and functionality.
