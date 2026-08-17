@@ -4,4 +4,10 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.android.library) apply false
+    id("com.gradleup.nmcp") version "0.0.9"
+}
+
+// Configure the Sonatype Central publishing helper plugin
+// Credentials are supplied via environment variables on the machine or CI (SONATYPE_USERNAME / SONATYPE_PASSWORD).
+nmcp {
 }

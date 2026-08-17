@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.gradleup.nmcp")
 }
 
 android {
@@ -44,6 +45,7 @@ android {
     publishing {
         singleVariant('release') {
             withSourcesJar()
+            withJavadocJar()
         }
         singleVariant('debug') {
             withSourcesJar()
@@ -72,3 +74,71 @@ dependencies {
 }
 
 //.___ End of KouraiKhryseai lib build gradle __./
+
+// Apply Maven publishing and signing for Maven Central
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                // Coordinates
+                groupId = 'io.github.josemg08'
+                artifactId = 'kouraikhryseai'
+                version = '1.0.0'
+
+                // Tells Gradle to pull components from your release build variant
+                def component = components.findByName('release')
+                if (component != null) {
+                    from component
+                }
+
+                // Required POM Metadata for Maven Central validation
+                pom {
+                    name = 'KouraiKhryseai'
+                    description = 'Android Design System based in Material 3 and the golden ratio'
+                    url = 'https://github.com/josemg08/KouraiKhryseai'
+
+                    licenses {
+                        license {
+                            name = 'The MIT License'
+                            url = 'https://github.com/josemg08/KouraiKhryseai?tab=MIT-1-ov-file#'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'josemg08'
+                            name = 'Jose M. Gonzalez'
+                        }
+                    }
+                    scm {
+                        connection = 'scm:git:https://github.com/josemg08/KouraiKhryseai.git'
+                        developerConnection = 'scm:git:git@github.com:josemg08/KouraiKhryseai.git'
+                        url = 'https://github.com/josemg08/KouraiKhryseai'
+                    }
+                }
+            }
+        }
+    }
+
+    // Signs your artifacts using your local GPG setup
+    signing {
+        def signingKey = System.getenv("GPG_SIGNING_KEY")
+        def signingPassword = System.getenv("GPG_PASSPHRASE")
+        if (signingKey != null && signingPassword != null) {
+            useInMemoryPgpKeys(signingKey, signingPassword)
+        } else {
+            // Fallback to system GPG command
+            useGpgCmd()
+        }
+        sign publishing.publications.release
+    }
+
+    nmcp {
+        publish("release") {
+            username = System.getenv("SONATYPE_USERNAME")
+            password = System.getenv("SONATYPE_PASSWORD")
+        }
+    }
+}
