@@ -63,7 +63,7 @@ internal fun generateDefaultLightColorScheme(
         tertiaryFixed = tertiaryPalette[90]!!,
         onTertiaryFixed = tertiaryPalette[10]!!,
         tertiaryFixedDim = tertiaryPalette[80]!!,
-        onTertiaryFixedVariant = tertiaryPalette[30]!!,
+        onTertiaryFixedVariant = tertiaryPalette[30]!!
     )
 }
 
@@ -127,6 +127,6 @@ internal fun generateDefaultDarkColorScheme(
         tertiaryFixed = tertiaryPalette[90]!!,
         onTertiaryFixed = tertiaryPalette[10]!!,
         tertiaryFixedDim = tertiaryPalette[80]!!,
-        onTertiaryFixedVariant = tertiaryPalette[30]!!,
+        onTertiaryFixedVariant = tertiaryPalette[30]!!
     )
 }

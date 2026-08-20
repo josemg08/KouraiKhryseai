@@ -12,6 +12,11 @@ import ar.imagin.kouraikhryseai.compose.ui.theme.colors.generateDefaultLightColo
 import ar.imagin.kouraikhryseai.compose.ui.theme.colors.getDefaultDarkExtendedColors
 import ar.imagin.kouraikhryseai.compose.ui.theme.colors.getDefaultLightExtendedColors
 
+/**
+ * Configuration for the color palette of the theme.
+ * Allows overriding primary, secondary, and tertiary colors to generate a full [ColorScheme],
+ * or providing custom [ColorScheme] and [ExtendedColorScheme] directly.
+ */
 data class KColorConfig(
     var primary: Color? = null,
     var secondary: Color? = null,
@@ -52,17 +57,38 @@ data class KColorConfig(
     }
 }
 
+/**
+ * Full configuration for [KTheme].
+ * @property colors Color configuration.
+ * @property fontFamily Global font family for the theme.
+ */
 data class KThemeConfig(
     val colors: KColorConfig = KColorConfig(),
     val fontFamily: FontFamily = FontFamily.Default
 )
 
+/**
+ * Singleton holder for [KThemeConfig].
+ * Must be initialized via [init] before [KTheme] is used if custom configuration is needed.
+ */
 object KThemeConfigHolder {
     private var themeConfig: KThemeConfig? = null
 
+    /**
+     * Returns the current [KThemeConfig]. If not initialized, returns a default configuration.
+     */
     val config: KThemeConfig
-        get() = themeConfig ?: error("KThemeConfig not initialized")
+        get() {
+            if (themeConfig == null) {
+                themeConfig = KThemeConfig()
+            }
+            return themeConfig!!
+        }
 
+    /**
+     * Initializes the theme with a custom configuration.
+     * This should ideally be called once, e.g., in the `Application.onCreate` or at the entry point of the app.
+     */
     fun init(config: KThemeConfig) {
         themeConfig = config
     }

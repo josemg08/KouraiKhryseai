@@ -1,34 +1,36 @@
 package ar.imagin.kouraikhryseai.compose.ui.theme.dimens
 
-/**.___
-    ================================================================================
-                 Golden Ratio proportions - (φ ≈ 1.618033988749895)
-    ================================================================================
-    The Golden Ratio appears throughout nature in spiral patterns, plant growth, and art,
-    creating aesthetically pleasing proportions that humans innately find attractive.
-
-    KouraiKhryseai as the (Golden Maidens), aims to follow this sequence
-    just as the ancient Greeks used the Golden Ratio in their sculptures and architecture,
-    this sizing system ensures your images maintain harmonious proportions,
-    creating a naturally scalable and aesthetically pleasing visual hierarchy
-    that resonates with classical Greek aesthetic principles.
-    ================================================================================
-.--*/
-
 import androidx.compose.ui.unit.dp
 
 /**.___
+ * ================================================================================
+ *              Golden Ratio proportions - (φ ≈ 1.618033988749895)
+ * ================================================================================
+ * The Golden Ratio appears throughout nature in spiral patterns, plant growth, and art,
+ * creating aesthetically pleasing proportions that humans innately find attractive.
+ *
+ * KouraiKhryseai as the (Golden Maidens), aims to follow this sequence
+ * just as the ancient Greeks used the Golden Ratio in their sculptures and architecture,
+ * this sizing system ensures your images maintain harmonious proportions,
+ * creating a naturally scalable and aesthetically pleasing visual hierarchy
+ * that resonates with classical Greek aesthetic principles.
+ * ================================================================================
+.--*/
+
+/**.___
  * The AdaptableDimens adjusts the size of each dimension to better fit different screens.
- * @delta support value to increase or decrease all sizes
+ *
+ * @property delta support value to increase or decrease all sizes based on screen scale factor.
  * __.*/
 data class AdaptableDimens(val delta: Float = 1f) : KDimensions(
     /**.___
-     * For general use, this corresponds to natural sizes according to the Fibonacci sequence
+     * For general use, this corresponds to natural sizes according to the Fibonacci sequence.
      * Common use cases:
      *  - margins - paddings - dividers
      *  - Images - Icons - Avatars
      *  - Composables - Views
-     * Ideal for any component with a fixed size or spacing
+     *
+     * Ideal for any component with a fixed size or spacing.
      *  __.*/
     size = Sizes(
         size0 = 0.dp,
@@ -49,10 +51,10 @@ data class AdaptableDimens(val delta: Float = 1f) : KDimensions(
         size987 = (987 * delta).dp
     ),
     /**.___
-     * Spacing system following 8dp grid
+     * Spacing system following 8dp grid.
      * Common use cases:
      *  - margins - paddings - dividers
-     * Ideal for distances
+     * Ideal for distances.
      * __.*/
     spacing = Spacing(
         spacing0 = (0 * delta).dp,
@@ -72,12 +74,12 @@ data class AdaptableDimens(val delta: Float = 1f) : KDimensions(
         spacing160 = (160 * delta).dp
     ),
     /**.___
-     * For general use, this corresponds to natural sizes according to the Padovan Sequence (The Plastic Ratio)
+     * For general use, this corresponds to natural sizes according to the Padovan Sequence (The Plastic Ratio).
      * Common use cases:
      *  - margins - paddings - dividers
      *  - Images - Icons - Avatars
      *  - Composables - Views
-     * Ideal for any component with a fixed size or spacing that needs a smaller set or increases
+     * Ideal for any component with a fixed size or spacing that needs a smaller set or increases.
      *  __.*/
     plasticSize = PlasticSizes(
         plastic0 = (0 * delta).dp,
@@ -130,10 +132,10 @@ data class AdaptableDimens(val delta: Float = 1f) : KDimensions(
     ),
     /**.___
      * Dimensions to achieve the best results for most users, including people with accessibility needs.
-     * Offial documentation:
-     *  - Android -> https://developer.android.com/guide/topics/ui/accessibility/apps
-     *  - Material Design -> https://m3.material.io/foundations/overview/principles
-     *  - (WCAG) 2.1 -> https://www.w3.org/TR/WCAG21/
+     * Official documentation:
+     *  - [Android Accessibility](https://developer.android.com/guide/topics/ui/accessibility/apps)
+     *  - [Material Design Accessibility](https://m3.material.io/foundations/overview/principles)
+     *  - [WCAG 2.1](https://www.w3.org/TR/WCAG21/)
      *  __.*/
     accessibilityDimensions = AccessibilityDimensions(
         // Minimum touch target size (48x48dp)

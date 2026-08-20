@@ -2,23 +2,45 @@ package ar.imagin.kouraikhryseai.compose.ui.theme.colors
 
 import androidx.compose.ui.graphics.Color
 
+/**
+ * A color scheme that extends the standard Material3 ColorScheme with additional semantic colors.
+ * This includes success, warning, info, and custom brand colors, following the Material3 color system pattern.
+ *
+ * Use `KTokens.extendedColors` to access these colors within a `KTheme`.
+ *
+ * @property success Color used to indicate a successful operation or state.
+ * @property onSuccess Color used for text and icons displayed on top of the success color.
+ * @property successContainer Muted color for success elements, providing less emphasis than [success].
+ * @property onSuccessContainer Color used for text and icons displayed on top of the [successContainer] color.
+ *
+ * @property warning Color used to indicate a warning or a state that requires attention.
+ * @property onWarning Color used for text and icons displayed on top of the warning color.
+ * @property warningContainer Muted color for warning elements, providing less emphasis than [warning].
+ * @property onWarningContainer Color used for text and icons displayed on top of the [warningContainer] color.
+ *
+ * @property info Color used to indicate an informative state or message.
+ * @property onInfo Color used for text and icons displayed on top of the info color.
+ * @property infoContainer Muted color for info elements, providing less emphasis than [info].
+ * @property onInfoContainer Color used for text and icons displayed on top of the [infoContainer] color.
+ *
+ * @property brand The primary custom brand color.
+ * @property onBrand Color used for text and icons displayed on top of the brand color.
+ * @property brandContainer Muted color for brand elements, providing less emphasis than [brand].
+ * @property onBrandContainer Color used for text and icons displayed on top of the [brandContainer] color.
+ */
 data class ExtendedColorScheme(
-    // Success colors follow Material3 patterns
     val success: Color,
     val onSuccess: Color,
     val successContainer: Color,
     val onSuccessContainer: Color,
-    // Warning colors follow Material3 patterns
     val warning: Color,
     val onWarning: Color,
     val warningContainer: Color,
     val onWarningContainer: Color,
-    // Info colors follow Material3 patterns
     val info: Color,
     val onInfo: Color,
     val infoContainer: Color,
     val onInfoContainer: Color,
-    // Brand colors follow Material3 patterns
     val brand: Color,
     val onBrand: Color,
     val brandContainer: Color,
