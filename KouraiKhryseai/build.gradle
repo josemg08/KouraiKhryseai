@@ -13,7 +13,7 @@ android {
     defaultConfig {
         minSdk libs.versions.minSdk.get().toInteger()
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -82,7 +82,7 @@ afterEvaluate {
                 // Coordinates
                 groupId = 'io.github.josemg08'
                 artifactId = 'kouraikhryseai'
-                version = '1.0.0'
+                version = '1.0.1'
 
                 // Tells Gradle to pull components from your release build variant
                 def component = components.findByName('release')
