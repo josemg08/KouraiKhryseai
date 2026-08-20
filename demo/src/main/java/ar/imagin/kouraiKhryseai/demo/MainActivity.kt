@@ -78,14 +78,14 @@ private fun MainScreen() {
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(paddingValues)
-                    .padding(horizontal = KTokens.dimensions.size.size6),
-                verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.size.size6)
+                    .padding(horizontal = KTokens.dimensions.size.size13),
+                verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.size.size13)
             ) {
                 item {
                     // Header section
                     Column(
-                        modifier = Modifier.padding(vertical = KTokens.dimensions.size.size7),
-                        verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.size.size5)
+                        modifier = Modifier.padding(vertical = KTokens.dimensions.size.size21),
+                        verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.size.size8)
                     ) {
                         Text(
                             text = "Kourai Khryseai",
@@ -111,7 +111,7 @@ private fun MainScreen() {
 
                 item {
                     // Bottom spacing for navigation bar
-                    Box(modifier = Modifier.padding(bottom = KTokens.dimensions.size.size6))
+                    Box(modifier = Modifier.padding(bottom = KTokens.dimensions.size.size13))
                 }
             }
         }
@@ -138,8 +138,8 @@ private fun TextCard(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(KTokens.dimensions.size.size7),
-            verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.size.size6)
+                .padding(KTokens.dimensions.size.size21),
+            verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.size.size13)
         ) {
             // Category badge
             Text(
@@ -152,7 +152,7 @@ private fun TextCard(
                         KTokens.shapes.chip
                     )
                     .padding(
-                        horizontal = KTokens.dimensions.size.size5,
+                        horizontal = KTokens.dimensions.size.size8,
                         vertical = KTokens.dimensions.size.size3
                     )
             )

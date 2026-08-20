@@ -31,7 +31,7 @@ fun getShapes() = ExtendedShapes(
         topStart = KTokens.dimensions.size.size8,
         topEnd = KTokens.dimensions.size.size8
     ),
-    dialog = RoundedCornerShape(KTokens.dimensions.size.size7),
+    dialog = RoundedCornerShape(KTokens.dimensions.size.size21),
     fab = RoundedCornerShape(KTokens.dimensions.radius.radius5),
     chip = RoundedCornerShape(KTokens.dimensions.radius.radius3),
     pill = RoundedCornerShape(50)

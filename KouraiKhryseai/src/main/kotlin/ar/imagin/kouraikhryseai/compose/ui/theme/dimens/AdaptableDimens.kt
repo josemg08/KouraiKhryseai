@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.dp
  * __.*/
 data class AdaptableDimens(val delta: Float = 1f) : KDimensions(
     /**.___
-     * For general use, this correspond to natural sizes according to the Fibonacci sequence
+     * For general use, this corresponds to natural sizes according to the Fibonacci sequence
      * Common use cases:
      *  - margins - paddings - dividers
      *  - Images - Icons - Avatars
@@ -35,18 +35,76 @@ data class AdaptableDimens(val delta: Float = 1f) : KDimensions(
         size1 = (1 * delta).dp,
         size2 = (2 * delta).dp,
         size3 = (3 * delta).dp,
-        size4 = (5 * delta).dp,
-        size5 = (8 * delta).dp,
-        size6 = (13 * delta).dp,
-        size7 = (21 * delta).dp,
-        size8 = (34 * delta).dp,
-        size9 = (55 * delta).dp,
-        size10 = (89 * delta).dp,
-        size11 = (144 * delta).dp,
-        size12 = (233 * delta).dp,
-        size13 = (377 * delta).dp,
-        size14 = (610 * delta).dp,
-        size15 = (987 * delta).dp
+        size5 = (5 * delta).dp,
+        size8 = (8 * delta).dp,
+        size13 = (13 * delta).dp,
+        size21 = (21 * delta).dp,
+        size34 = (34 * delta).dp,
+        size55 = (55 * delta).dp,
+        size89 = (89 * delta).dp,
+        size144 = (144 * delta).dp,
+        size233 = (233 * delta).dp,
+        size377 = (377 * delta).dp,
+        size610 = (610 * delta).dp,
+        size987 = (987 * delta).dp
+    ),
+    /**.___
+     * Spacing system following 8dp grid
+     * Common use cases:
+     *  - margins - paddings - dividers
+     * Ideal for distances
+     * __.*/
+    spacing = Spacing(
+        spacing0 = (0 * delta).dp,
+        spacing2 = (2 * delta).dp,
+        spacing4 = (4 * delta).dp,
+        spacing8 = (8 * delta).dp,
+        spacing16 = (16 * delta).dp,
+        spacing24 = (24 * delta).dp,
+        spacing32 = (32 * delta).dp,
+        spacing40 = (40 * delta).dp,
+        spacing48 = (48 * delta).dp,
+        spacing56 = (56 * delta).dp,
+        spacing64 = (64 * delta).dp,
+        spacing80 = (80 * delta).dp,
+        spacing96 = (96 * delta).dp,
+        spacing120 = (120 * delta).dp,
+        spacing160 = (160 * delta).dp
+    ),
+    /**.___
+     * For general use, this corresponds to natural sizes according to the Padovan Sequence (The Plastic Ratio)
+     * Common use cases:
+     *  - margins - paddings - dividers
+     *  - Images - Icons - Avatars
+     *  - Composables - Views
+     * Ideal for any component with a fixed size or spacing that needs a smaller set or increases
+     *  __.*/
+    plasticSize = PlasticSizes(
+        plastic0 = (0 * delta).dp,
+        plastic1 = (1 * delta).dp,
+        plastic2 = (2 * delta).dp,
+        plastic3 = (3 * delta).dp,
+        plastic4 = (4 * delta).dp,
+        plastic5 = (5 * delta).dp,
+        plastic7 = (7 * delta).dp,
+        plastic9 = (9 * delta).dp,
+        plastic12 = (12 * delta).dp,
+        plastic16 = (16 * delta).dp,
+        plastic21 = (21 * delta).dp,
+        plastic28 = (28 * delta).dp,
+        plastic37 = (37 * delta).dp,
+        plastic49 = (49 * delta).dp,
+        plastic65 = (65 * delta).dp,
+        plastic86 = (86 * delta).dp,
+        plastic114 = (114 * delta).dp,
+        plastic151 = (151 * delta).dp,
+        plastic200 = (200 * delta).dp,
+        plastic265 = (265 * delta).dp,
+        plastic351 = (351 * delta).dp,
+        plastic465 = (465 * delta).dp,
+        plastic616 = (616 * delta).dp,
+        plastic816 = (816 * delta).dp,
+        plastic1081 = (1081 * delta).dp
     ),
     /**.___ Elevation tokens for consistent shadows, following Material Design __.*/
     elevation = Elevation(
