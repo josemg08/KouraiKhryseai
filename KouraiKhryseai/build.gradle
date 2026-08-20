@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace 'ar.imagin.KouraiKhryseai'
-    compileSdk 36
+    compileSdk libs.versions.compileSdk.get().toInteger()
 
     resourcePrefix 'k_'
 
     defaultConfig {
-        minSdk 24
+        minSdk libs.versions.minSdk.get().toInteger()
         versionCode 1
         versionName "1.0"
 
@@ -52,6 +52,7 @@ dependencies {
     // Android
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
+    implementation libs.google.material
 
     // Compose
     implementation(libs.androidx.activity.compose)
@@ -60,7 +61,7 @@ dependencies {
 
     // Material
     implementation libs.androidx.material3
-    api(libs.material)
+    api libs.androidx.material.icons.core
 
     // Testing
     testImplementation libs.junit

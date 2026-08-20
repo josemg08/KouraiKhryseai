@@ -52,6 +52,18 @@ internal fun generateDefaultLightColorScheme(
         surfaceContainerLow = Neutral95,
         surfaceContainerLowest = Transparent,
         surfaceDim = NeutralVariant90,
+        primaryFixed = primaryPalette[90]!!,
+        onPrimaryFixed = primaryPalette[10]!!,
+        primaryFixedDim = primaryPalette[80]!!,
+        onPrimaryFixedVariant = primaryPalette[30]!!,
+        secondaryFixed = secondaryPalette[90]!!,
+        onSecondaryFixed = secondaryPalette[10]!!,
+        secondaryFixedDim = secondaryPalette[80]!!,
+        onSecondaryFixedVariant = secondaryPalette[30]!!,
+        tertiaryFixed = tertiaryPalette[90]!!,
+        onTertiaryFixed = tertiaryPalette[10]!!,
+        tertiaryFixedDim = tertiaryPalette[80]!!,
+        onTertiaryFixedVariant = tertiaryPalette[30]!!,
     )
 }
 
@@ -104,5 +116,17 @@ internal fun generateDefaultDarkColorScheme(
         surfaceContainerLow = DarkBlue20,
         surfaceContainerLowest = DarkBlue10,
         surfaceDim = DarkBlue10,
+        primaryFixed = primaryPalette[90]!!,
+        onPrimaryFixed = primaryPalette[10]!!,
+        primaryFixedDim = primaryPalette[80]!!,
+        onPrimaryFixedVariant = primaryPalette[30]!!,
+        secondaryFixed = secondaryPalette[90]!!,
+        onSecondaryFixed = secondaryPalette[10]!!,
+        secondaryFixedDim = secondaryPalette[80]!!,
+        onSecondaryFixedVariant = secondaryPalette[30]!!,
+        tertiaryFixed = tertiaryPalette[90]!!,
+        onTertiaryFixed = tertiaryPalette[10]!!,
+        tertiaryFixedDim = tertiaryPalette[80]!!,
+        onTertiaryFixedVariant = tertiaryPalette[30]!!,
     )
 }

@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "ar.imagin.kouraiKhryseai.demo"
-    compileSdk = 36
+    compileSdk = libs.versions.compileSdk.get().toInteger()
 
     defaultConfig {
         applicationId = "ar.imagin.kouraiKhryseai.demo"
-        minSdk = 24
-        targetSdk = 36
+        minSdk = libs.versions.minSdk.get().toInteger()
+        targetSdk = libs.versions.compileSdk.get().toInteger()
         versionCode = 1
         versionName = "1.0"
 
