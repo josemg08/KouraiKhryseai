@@ -23,15 +23,15 @@ fun getShapes() = ExtendedShapes(
         small = RoundedCornerShape(KTokens.dimensions.radius.radius3),
         medium = RoundedCornerShape(KTokens.dimensions.radius.radius4),
         large = RoundedCornerShape(KTokens.dimensions.radius.radius5),
-        extraLarge = RoundedCornerShape(KTokens.dimensions.size.size8)
+        extraLarge = RoundedCornerShape(KTokens.dimensions.goldenRatio.goldenRatio8)
     ),
     button = RoundedCornerShape(KTokens.dimensions.radius.radius4),
     card = RoundedCornerShape(KTokens.dimensions.radius.radius5),
     bottomSheet = RoundedCornerShape(
-        topStart = KTokens.dimensions.size.size8,
-        topEnd = KTokens.dimensions.size.size8
+        topStart = KTokens.dimensions.goldenRatio.goldenRatio8,
+        topEnd = KTokens.dimensions.goldenRatio.goldenRatio8
     ),
-    dialog = RoundedCornerShape(KTokens.dimensions.size.size21),
+    dialog = RoundedCornerShape(KTokens.dimensions.goldenRatio.goldenRatio21),
     fab = RoundedCornerShape(KTokens.dimensions.radius.radius5),
     chip = RoundedCornerShape(KTokens.dimensions.radius.radius3),
     pill = RoundedCornerShape(50)

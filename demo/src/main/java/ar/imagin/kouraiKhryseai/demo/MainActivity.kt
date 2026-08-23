@@ -78,14 +78,14 @@ private fun MainScreen() {
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(paddingValues)
-                    .padding(horizontal = KTokens.dimensions.size.size13),
-                verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.size.size13)
+                    .padding(horizontal = KTokens.dimensions.goldenRatio.goldenRatio13),
+                verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.goldenRatio.goldenRatio13)
             ) {
                 item {
                     // Header section
                     Column(
-                        modifier = Modifier.padding(vertical = KTokens.dimensions.size.size21),
-                        verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.size.size8)
+                        modifier = Modifier.padding(vertical = KTokens.dimensions.goldenRatio.goldenRatio21),
+                        verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.goldenRatio.goldenRatio8)
                     ) {
                         Text(
                             text = "Kourai Khryseai",
@@ -111,7 +111,7 @@ private fun MainScreen() {
 
                 item {
                     // Bottom spacing for navigation bar
-                    Box(modifier = Modifier.padding(bottom = KTokens.dimensions.size.size13))
+                    Box(modifier = Modifier.padding(bottom = KTokens.dimensions.goldenRatio.goldenRatio13))
                 }
             }
         }
@@ -138,8 +138,8 @@ private fun TextCard(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(KTokens.dimensions.size.size21),
-            verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.size.size13)
+                .padding(KTokens.dimensions.goldenRatio.goldenRatio21),
+            verticalArrangement = Arrangement.spacedBy(KTokens.dimensions.goldenRatio.goldenRatio13)
         ) {
             // Category badge
             Text(
@@ -152,8 +152,8 @@ private fun TextCard(
                         KTokens.shapes.chip
                     )
                     .padding(
-                        horizontal = KTokens.dimensions.size.size8,
-                        vertical = KTokens.dimensions.size.size3
+                        horizontal = KTokens.dimensions.goldenRatio.goldenRatio8,
+                        vertical = KTokens.dimensions.goldenRatio.goldenRatio3
                     )
             )
 

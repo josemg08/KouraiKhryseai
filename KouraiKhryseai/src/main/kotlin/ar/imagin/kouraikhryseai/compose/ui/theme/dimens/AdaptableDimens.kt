@@ -24,33 +24,6 @@ import androidx.compose.ui.unit.dp
  * __.*/
 data class AdaptableDimens(val delta: Float = 1f) : KDimensions(
     /**.___
-     * For general use, this corresponds to natural sizes according to the Fibonacci sequence.
-     * Common use cases:
-     *  - margins - paddings - dividers
-     *  - Images - Icons - Avatars
-     *  - Composables - Views
-     *
-     * Ideal for any component with a fixed size or spacing.
-     *  __.*/
-    size = Sizes(
-        size0 = 0.dp,
-        size1 = (1 * delta).dp,
-        size2 = (2 * delta).dp,
-        size3 = (3 * delta).dp,
-        size5 = (5 * delta).dp,
-        size8 = (8 * delta).dp,
-        size13 = (13 * delta).dp,
-        size21 = (21 * delta).dp,
-        size34 = (34 * delta).dp,
-        size55 = (55 * delta).dp,
-        size89 = (89 * delta).dp,
-        size144 = (144 * delta).dp,
-        size233 = (233 * delta).dp,
-        size377 = (377 * delta).dp,
-        size610 = (610 * delta).dp,
-        size987 = (987 * delta).dp
-    ),
-    /**.___
      * Spacing system following 8dp grid.
      * Common use cases:
      *  - margins - paddings - dividers
@@ -74,14 +47,85 @@ data class AdaptableDimens(val delta: Float = 1f) : KDimensions(
         spacing160 = (160 * delta).dp
     ),
     /**.___
-     * For general use, this corresponds to natural sizes according to the Padovan Sequence (The Plastic Ratio).
+     * For general use, sizes increasing in pair intervals.
      * Common use cases:
-     *  - margins - paddings - dividers
      *  - Images - Icons - Avatars
      *  - Composables - Views
-     * Ideal for any component with a fixed size or spacing that needs a smaller set or increases.
+     * Ideal for any component with a fixed size
      *  __.*/
-    plasticSize = PlasticSizes(
+    sizes = Sizes(
+        size0 = (0 * delta).dp,
+        size1 = (1 * delta).dp,
+        size2 = (2 * delta).dp,
+        size4 = (4 * delta).dp,
+        size6 = (6 * delta).dp,
+        size8 = (8 * delta).dp,
+        size10 = (10 * delta).dp,
+        size12 = (12 * delta).dp,
+        size16 = (16 * delta).dp,
+        size18 = (18 * delta).dp,
+        size20 = (20 * delta).dp,
+        size24 = (24 * delta).dp,
+        size28 = (28 * delta).dp,
+        size32 = (32 * delta).dp,
+        size36 = (36 * delta).dp,
+        size40 = (40 * delta).dp,
+        size48 = (48 * delta).dp,
+        size56 = (56 * delta).dp,
+        size64 = (64 * delta).dp,
+        size80 = (80 * delta).dp,
+        size96 = (96 * delta).dp,
+        size120 = (120 * delta).dp,
+        size160 = (160 * delta).dp,
+        size200 = (200 * delta).dp,
+        size240 = (240 * delta).dp,
+        size280 = (280 * delta).dp,
+        size320 = (320 * delta).dp,
+        size360 = (360 * delta).dp,
+        size400 = (400 * delta).dp,
+        size480 = (480 * delta).dp,
+        size560 = (560 * delta).dp,
+        size640 = (640 * delta).dp,
+        size720 = (720 * delta).dp,
+        size800 = (800 * delta).dp,
+        size960 = (960 * delta).dp,
+        size1200 = (1200 * delta).dp
+    ),
+    /**.___
+     * For general use, this corresponds to natural sizes according to the Fibonacci sequence (φ ≈ 1.618033988749895)
+     * With the golden ratio, we can create aesthetically pleasing proportions that resonate with classical Greek aesthetic principles.
+     * Common use cases:
+     *  - Images - Icons - Avatars
+     *  - Composables - Views
+     * More limited than sizes, but ideal to keep consistency and aesthetic proportions.
+     *  __.*/
+    goldenRatio = Fibonacci(
+        goldenRatio0 = 0.dp,
+        goldenRatio1 = (1 * delta).dp,
+        goldenRatio2 = (2 * delta).dp,
+        goldenRatio3 = (3 * delta).dp,
+        goldenRatio5 = (5 * delta).dp,
+        goldenRatio8 = (8 * delta).dp,
+        goldenRatio13 = (13 * delta).dp,
+        goldenRatio21 = (21 * delta).dp,
+        goldenRatio34 = (34 * delta).dp,
+        goldenRatio55 = (55 * delta).dp,
+        goldenRatio89 = (89 * delta).dp,
+        goldenRatio144 = (144 * delta).dp,
+        goldenRatio233 = (233 * delta).dp,
+        goldenRatio377 = (377 * delta).dp,
+        goldenRatio610 = (610 * delta).dp,
+        goldenRatio987 = (987 * delta).dp
+    ),
+    /**.___
+     * This corresponds to the Padovan Sequence (The Plastic Ratio) a sequence based on Fibonacci but one that keeps the numbers closer together.
+     * To be utilized when more precise and closer numbers are a must, while maintaining aesthetic proportions and symmetry similar to the Golden Ratio.
+     * Common use cases:
+     *  - Images - Icons - Avatars
+     *  - Composables - Views
+     * More limited than sizes, but with more options than the golden ratio, ideal to keep consistency and aesthetic proportions.
+     *  __.*/
+    plasticSize = Padovan(
         plastic0 = (0 * delta).dp,
         plastic1 = (1 * delta).dp,
         plastic2 = (2 * delta).dp,

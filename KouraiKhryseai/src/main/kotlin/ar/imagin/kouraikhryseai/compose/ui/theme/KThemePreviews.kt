@@ -47,8 +47,8 @@ fun ExtendedColorsShowcase() {
         modifier = Modifier
             .fillMaxWidth()
             .padding(dimensions.plasticSize.plastic16),
-        verticalArrangement = Arrangement.spacedBy(dimensions.size.size8),
-        horizontalArrangement = Arrangement.spacedBy(dimensions.size.size8)
+        verticalArrangement = Arrangement.spacedBy(dimensions.goldenRatio.goldenRatio8),
+        horizontalArrangement = Arrangement.spacedBy(dimensions.goldenRatio.goldenRatio8)
     ) {
         items(colorItems) { (name, color) ->
             ColorItem(name = name, color = color, shape = shapes.card)

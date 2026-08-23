@@ -29,45 +29,90 @@ data class Spacing(
 )
 
 /**.___
- * For general use, this corresponds to natural sizes according to the Fibonacci sequence (φ ≈ 1.618033988749895)
- * With the golden ratio, we can create aesthetically pleasing proportions that resonate with classical Greek aesthetic principles.
+ * For general use, sizes increasing in pair intervals.
  * Common use cases:
- *  - margins - paddings - dividers
  *  - Images - Icons - Avatars
  *  - Composables - Views
- * Ideal for any component with a fixed size or spacing
+ * Ideal for any component with a fixed size
  *  __.*/
 @Immutable
 data class Sizes(
     val size0: Dp,
     val size1: Dp,
     val size2: Dp,
-    val size3: Dp,
-    val size5: Dp,
+    val size4: Dp,
+    val size6: Dp,
     val size8: Dp,
-    val size13: Dp,
-    val size21: Dp,
-    val size34: Dp,
-    val size55: Dp,
-    val size89: Dp,
-    val size144: Dp,
-    val size233: Dp,
-    val size377: Dp,
-    val size610: Dp,
-    val size987: Dp
+    val size10: Dp,
+    val size12: Dp,
+    val size16: Dp,
+    val size18: Dp,
+    val size20: Dp,
+    val size24: Dp,
+    val size28: Dp,
+    val size32: Dp,
+    val size36: Dp,
+    val size40: Dp,
+    val size48: Dp,
+    val size56: Dp,
+    val size64: Dp,
+    val size80: Dp,
+    val size96: Dp,
+    val size120: Dp,
+    val size160: Dp,
+    val size200: Dp,
+    val size240: Dp,
+    val size280: Dp,
+    val size320: Dp,
+    val size360: Dp,
+    val size400: Dp,
+    val size480: Dp,
+    val size560: Dp,
+    val size640: Dp,
+    val size720: Dp,
+    val size800: Dp,
+    val size960: Dp,
+    val size1200: Dp
 )
 
 /**.___
-* This corresponds to the Padovan Sequence (The Plastic Ratio) a sequence based on Fibonacci but one that keeps the numbers closer together.
-* To be utilized when more precise and closer numbers are a must, while maintaining aesthetic proportions and symmetry similar to the Golden Ratio.
-* Common use cases:
-*  - margins - paddings - dividers
-*  - Images - Icons - Avatars
-*  - Composables - Views
-* Ideal for any component with a fixed size or spacing that needs a smaller set or increases
-*  __.*/
+ * For general use, this corresponds to natural sizes according to the Fibonacci sequence (φ ≈ 1.618033988749895)
+ * With the golden ratio, we can create aesthetically pleasing proportions that resonate with classical Greek aesthetic principles.
+ * Common use cases:
+ *  - Images - Icons - Avatars
+ *  - Composables - Views
+ * More limited than sizes, but ideal to keep consistency and aesthetic proportions.
+ *  __.*/
 @Immutable
-data class PlasticSizes(
+data class Fibonacci(
+    val goldenRatio0: Dp,
+    val goldenRatio1: Dp,
+    val goldenRatio2: Dp,
+    val goldenRatio3: Dp,
+    val goldenRatio5: Dp,
+    val goldenRatio8: Dp,
+    val goldenRatio13: Dp,
+    val goldenRatio21: Dp,
+    val goldenRatio34: Dp,
+    val goldenRatio55: Dp,
+    val goldenRatio89: Dp,
+    val goldenRatio144: Dp,
+    val goldenRatio233: Dp,
+    val goldenRatio377: Dp,
+    val goldenRatio610: Dp,
+    val goldenRatio987: Dp
+)
+
+/**.___
+ * This corresponds to the Padovan Sequence (The Plastic Ratio) a sequence based on Fibonacci but one that keeps the numbers closer together.
+ * To be utilized when more precise and closer numbers are a must, while maintaining aesthetic proportions and symmetry similar to the Golden Ratio.
+ * Common use cases:
+ *  - Images - Icons - Avatars
+ *  - Composables - Views
+ * More limited than sizes, but with more options than the golden ratio, ideal to keep consistency and aesthetic proportions.
+ *  __.*/
+@Immutable
+data class Padovan(
     val plastic0: Dp,
     val plastic1: Dp,
     val plastic2: Dp,
@@ -125,7 +170,7 @@ data class Borders(
 
 /**.___
  * Dimensions to achieve the best results for most users, including people with accessibility needs.
- * Offial documentation:
+ * Official documentation:
  *  - Android -> https://developer.android.com/guide/topics/ui/accessibility/apps
  *  - Material Design -> https://m3.material.io/foundations/overview/principles
  *  - (WCAG) 2.1 -> https://www.w3.org/TR/WCAG21/
