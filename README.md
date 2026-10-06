@@ -10,7 +10,7 @@
 
 ## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Overview
 
-KouraiKhryseai (from Ancient Greek: κοῦραι χρύσειαι, "golden maidens") is an elegant Android design system library inspired by Hephaestus's legendary automata. Just as these divine constructs assisted the god craftsman in his forge, this library aims to empower Android developers in crafting beautiful and accessible applications.
+KouraiKhryseai (from Ancient Greek: κοῦραι χρύσειαι, "golden maidens") is an elegant Android theme wrapper library inspired by Hephaestus's legendary automata. Just as these divine constructs assisted the god craftsman in his forge, this library aims to empower Android developers in crafting beautiful and accessible applications.
 
 ## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Features
 
