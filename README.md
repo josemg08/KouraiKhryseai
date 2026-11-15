@@ -2,9 +2,9 @@
 
 # <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> KouraiKhryseai
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.josemg08/kourai-khryseai)](https://search.maven.org/artifact/com.github.josemg08/kourai-khryseai)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.josemg08/kouraikhryseai)](https://search.maven.org/artifact/io.github.josemg08/kouraikhryseai)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/josemg08/KouraiKhryseai/blob/master/LICENSE)
-[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg)](https://android-arsenal.com/api?level=21)
+[![API](https://img.shields.io/badge/API-24%2B-brightgreen.svg)](https://android-arsenal.com/api?level=24)
 
 > "These are golden, and in appearance like living young women. There is intelligence in their hearts, and there is speech in them and strength..." - Homer, Iliad 18.417-420
 
@@ -18,6 +18,34 @@ KouraiKhryseai (from Ancient Greek: κοῦραι χρύσειαι, "golden maid
 * **Golden Ratio** - Dimension follow Fibonacci sequence to achieve natural symmetry
 * **Performance Optimized** - Lightweight implementation with minimal overhead
 * **Ease of use** - Highly customizable with minimal tinkering
+
+## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Installation
+
+Add the dependency to your `build.gradle` or `build.gradle.kts`:
+
+```groovy
+implementation 'io.github.josemg08:kouraikhryseai:1.0.3'
+```
+
+```kotlin
+implementation("io.github.josemg08:kouraikhryseai:1.0.3")
+```
+
+Or in Version Catalog (`gradle/libs.versions.toml`):
+
+```toml
+[versions]
+kouraikhryseai = "1.0.3"
+
+[libraries]
+kouraikhryseai = { group = "io.github.josemg08", name = "kouraikhryseai", version.ref = "kouraikhryseai" }
+```
+
+```kotlin
+implementation(libs.kouraikhryseai)
+```
+
+> **Requires Kotlin 2.1.0+** and Compose.
 
 ## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Usage
 
