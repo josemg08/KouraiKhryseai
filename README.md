@@ -49,9 +49,41 @@ implementation(libs.kouraikhryseai)
 
 ## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Usage
 
+### Quick Start
+
+Wrap your content in `KTheme` and access tokens through `KTokens` — no initialization required:
+
+```kotlin
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            KTheme {
+                // Material 3 colors
+                KTokens.materialColors.primary
+                KTokens.materialColors.surface
+
+                // Extended semantic colors (success, warning, info, brand)
+                KTokens.extendedColors.success
+                KTokens.extendedColors.warning
+
+                // Adaptable dimensions (scales automatically based on screen width)
+                KTokens.dimensions.spacing.spacing16
+                KTokens.dimensions.goldenRatio.goldenRatio21
+                KTokens.dimensions.plasticSize.plastic86
+
+                // Typography & shapes
+                KTokens.typography
+                KTokens.shapes.card
+            }
+        }
+    }
+}
+```
+
 ### Theme Configuration
 
-KouraiKhryseai provides a flexible theming system through `KThemeConfig` and `KTheme`. Initialize the configuration in your `Application` class and wrap your UI with the theme composable.
+KouraiKhryseai provides a flexible theming system through `KThemeConfig` and `KTheme`. The configuration above works with defaults — the steps below are **optional** and only needed if you want custom colors or fonts.
 
 #### Basic Setup
 
