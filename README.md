@@ -47,6 +47,16 @@ implementation(libs.kouraikhryseai)
 
 > **Requires Kotlin 2.1.0+** and Compose.
 
+### Version Compatibility
+
+| Version | Kotlin | Notes |
+|---------|--------|-------|
+| `1.0.3` | 2.1.0 | Binary-compatible with Kotlin 2.1.0+ consumers |
+| `1.0.2` | 2.4.10 | Requires Kotlin 2.4.0+ to consume (metadata version 2.4.0) |
+| `1.0.1` | 2.4.10 | Requires Kotlin 2.4.0+ to consume |
+
+If your project uses Kotlin 2.1.0–2.3.x, use **1.0.3**. If your project uses Kotlin 2.4.0+, you can use either version.
+
 ## <img src=".idea/icon.svg" width="24" height="24" alt="Plugin Icon" style="vertical-align: middle;"> Usage
 
 ### Quick Start
